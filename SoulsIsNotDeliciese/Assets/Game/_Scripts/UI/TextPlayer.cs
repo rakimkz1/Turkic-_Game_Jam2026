@@ -8,125 +8,179 @@ using UnityEngine;
 public class TextPlayer
 {
 	public TextMeshProUGUI Text;
-	public State CurrentState {  get => currentState; }
+	public State CurrentState => currentState;
 
-	private float speedPlaying = 10f;
+	private float playingTime = 1f;
+	private float secondsPerLetter = 0.1f;
 	private float keepDuration = 10f;
 
-	private State currentState;
-	private string currentFullContent;
+	private State currentState = State.Nothing;
+
+	private string currentFullContent = string.Empty;
 
 	private CancellationTokenSource cts;
 
-	private bool isCtsWorking = false;
-
-	public void Init(float SpeedPlaying = 10f, float KeepDuration = 10f)
+	public void Init(
+		float speedPlaying = 1f,
+		float secondsPerLetter = 0.1f,
+		float keepDuration = 10f)
 	{
-		Text.text = "";
+		this.playingTime = speedPlaying;
+		this.secondsPerLetter = secondsPerLetter;
+		this.keepDuration = keepDuration;
+
 		currentState = State.Nothing;
-		speedPlaying = SpeedPlaying;
-		keepDuration = KeepDuration;
+		currentFullContent = string.Empty;
+
+		Text.text = string.Empty;
 	}
 
-	public void SkipOrPlay(string content, bool ShowImmediatelyAfterSkip = false)
+	public void SkipOrPlay(
+		string content,
+		float speed,
+		float keepDuration,
+		bool useSecondsPerLetter = false,
+		bool showImmediatelyAfterSkip = false)
+	{
+		this.keepDuration = keepDuration;
+
+		if (useSecondsPerLetter)
+			secondsPerLetter = speed;
+		else
+			playingTime = speed;
+
+		SkipOrPlay(content, useSecondsPerLetter, showImmediatelyAfterSkip);
+	}
+
+	public void SkipOrPlay(
+		string content,
+		bool useSecondsPerLetter = false,
+		bool showImmediatelyAfterSkip = false)
 	{
 		switch (currentState)
 		{
 			case State.Nothing:
-				{
-					currentState = State.Playing;
-					currentFullContent = content;
-
-					if (isCtsWorking)
-					{
-						cts.Cancel();
-					}
-					cts = new CancellationTokenSource();
-					_ = PlayTheText(cts);
-				}
+				StartPlaying(content, useSecondsPerLetter);
 				break;
 
 			case State.Playing:
-				{
-					currentState = State.Showing;
-					cts.Cancel();
-					Text.text = currentFullContent;
+				SkipCurrentText();
 
-					if (ShowImmediatelyAfterSkip)
-					{
-						currentState = State.Nothing;
-						SkipOrPlay(content);
-					}
+				if (showImmediatelyAfterSkip)
+				{
+					StartPlaying(content, useSecondsPerLetter);
 				}
 				break;
 
 			case State.Showing:
-				{
-					currentState = State.Nothing;
-					SkipOrPlay(content);
-				}
+				StartPlaying(content, useSecondsPerLetter);
 				break;
 		}
 	}
 
 	public void ClosePlaying()
 	{
+		CancelCurrentTask();
+
 		currentState = State.Nothing;
-		currentFullContent = "";
+		currentFullContent = string.Empty;
 
+		if (Text != null)
+			Text.text = string.Empty;
 	}
 
+	private void StartPlaying(string content, bool useSecondsPerLetter)
+	{
+		CancelCurrentTask();
 
-	private async UniTask PlayTheText(CancellationTokenSource cts)
+		currentFullContent = content;
+		currentState = State.Playing;
+
+		cts = new CancellationTokenSource();
+
+		_ = PlayAsync(
+			content,
+			useSecondsPerLetter,
+			cts.Token);
+	}
+
+	private void SkipCurrentText()
+	{
+		CancelCurrentTask();
+
+		currentState = State.Showing;
+		Text.text = currentFullContent;
+	}
+
+	private async UniTaskVoid PlayAsync(
+		string fullContent,
+		bool useSecondsPerLetter,
+		CancellationToken token)
 	{
 		try
 		{
-			isCtsWorking = true;
+			await UniTask.Yield(token);
 
-			await UniTask.Yield(cts.Token);
-
-			float secondsPerLetter = speedPlaying / currentFullContent.Length;
-			float time = 0;
-
-			while (time < speedPlaying)
+			if (string.IsNullOrEmpty(fullContent))
 			{
-				time += Time.deltaTime;
-				int currentLength = (int)(time / secondsPerLetter);
-				string content = currentFullContent.Substring(0, currentLength);
-				Text.text = content;
-
-				await UniTask.Yield(PlayerLoopTiming.Update, cts.Token);
+				currentState = State.Showing;
+				return;
 			}
-			Text.text = currentFullContent;
+
+			float duration = useSecondsPerLetter
+				? secondsPerLetter * fullContent.Length
+				: playingTime;
+
+			float currentSecondsPerLetter = duration / fullContent.Length;
+
+			float elapsed = 0f;
+
+			while (elapsed < duration)
+			{
+				elapsed += Time.deltaTime;
+
+				int length =
+					Mathf.Min(
+						(int)(elapsed / currentSecondsPerLetter),
+						fullContent.Length);
+
+				Text.text = fullContent.Substring(0, length);
+
+				await UniTask.Yield(token);
+			}
+
+			Text.text = fullContent;
 			currentState = State.Showing;
-			
-			cts = new CancellationTokenSource();
-			_ = WaitTillEnd(cts);
+
+			await UniTask.WaitForSeconds(
+				keepDuration,
+				cancellationToken: token);
+
+			if (currentState == State.Showing)
+			{
+				ClosePlaying();
+			}
 		}
-		catch (Exception ex)
+		catch (OperationCanceledException)
 		{
-			Debug.Log("PlayTheText has been Cancelled");
+			// Нормальное завершение.
 		}
 	}
 
-	private async UniTask WaitTillEnd(CancellationTokenSource cts)
+	private void CancelCurrentTask()
 	{
-		try
-		{
-			await UniTask.WaitForSeconds(keepDuration, cancellationToken: cts.Token);
-			isCtsWorking = false;
-		}
-		catch (Exception ex)
-		{
-			Debug.Log("WaitTillEnd has been Cancelled");
-		}
-	}
+		if (cts == null)
+			return;
 
+		cts.Cancel();
+		cts.Dispose();
+		cts = null;
+	}
 
 	public enum State
 	{
-		Nothing,			// Пустое текстовое поле
-		Showing,			// Уже написанное текстовое поле
-		Playing				// Еще в процессе написания
+		Nothing,
+		Showing,
+		Playing
 	}
 }
