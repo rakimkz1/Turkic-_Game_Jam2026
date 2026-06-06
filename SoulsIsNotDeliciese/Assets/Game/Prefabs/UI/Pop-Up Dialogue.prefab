@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9052398911818770611}
   - component: {fileID: 4729445728727406471}
   - component: {fileID: 6680608096661647422}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Pop-Up Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PopUpLogic
   textPlayer:
     Text: {fileID: 1893795440972245147}
-  TextSpeed: 0.08
+  TextSpeed: 0.05
   WaitTime: 5
   TextingType: 0
 --- !u!222 &5528627783856723371
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 6580461850059293182}
   - component: {fileID: 1893795440972245147}
   - component: {fileID: 3496186772110213127}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

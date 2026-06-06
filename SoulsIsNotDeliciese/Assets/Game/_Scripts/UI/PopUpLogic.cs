@@ -10,6 +10,8 @@ public class PopUpLogic : MonoBehaviour
 
 	private RectTransform rectTransform;
 
+	public TextPlayer TextPlayer => textPlayer;
+
 	/// <summary>
 	/// 
 	/// </summary>
