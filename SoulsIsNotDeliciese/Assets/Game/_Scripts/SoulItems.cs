@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -36,8 +37,8 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
     public void Return()
     {
         isGrabed = false;
-        transform.position = intialPos;
-        transform.rotation = initialRot;
+        transform.DOMove(intialPos, 1f);;
+        transform.DORotateQuaternion(initialRot, 1f);
         GetComponent<Collider>().enabled = true;
     }
 

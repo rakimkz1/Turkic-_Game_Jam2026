@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
+using UnityEngine;
 
 public class CameraInteract : MonoBehaviour
 {
@@ -32,6 +34,8 @@ public class CameraInteract : MonoBehaviour
             {
                 currentSouls = hit.collider.GetComponent<SoulItems>();
                 currentSouls.Grab();
+                if(BoilerManager.Instance.isSoulsRequires == true)
+                    BoilerManager.Instance._view.OpenCap();
                 isGrabingSoul = true;
             }
             if(hit.collider != null && hit.collider.gameObject.tag == "Kalendar")
@@ -52,17 +56,24 @@ public class CameraInteract : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                if (hit.collider != null && hit.collider.tag == "Boiler")
+                if (hit.collider != null && hit.collider.tag == "Boiler" && BoilerManager.Instance.isSoulsRequires)
                 {
-                    BoilerManager.Instance.StartBoiderGame(currentSouls.InitialSoul);
-                    isGrabingSoul = false;
+                    ThrowItem();
                 }
                 else
                 {
                     currentSouls.Return();
                     isGrabingSoul = false;
+                    BoilerManager.Instance._view.CloseCap();
                 }
             }
         }
+    }
+
+    private async UniTask ThrowItem()
+    {
+        isGrabingSoul = false;
+        await BoilerManager.Instance._view.ThrowItemIntoCap(currentSouls.transform);
+        BoilerManager.Instance.StartBoiderGame(currentSouls.InitialSoul);
     }
 }

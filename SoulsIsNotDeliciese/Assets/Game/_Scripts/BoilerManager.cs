@@ -6,6 +6,7 @@ public class BoilerManager : MonoBehaviour
 {
     public bool isBoilderGamePlaying;
     public bool isCapControlable;
+    public bool isSoulsRequires = true;
     public Action onBoiderGameStart;
     public Action onBoilerGameEnd;
     public GameObject boiderGamePanel;
@@ -30,6 +31,7 @@ public class BoilerManager : MonoBehaviour
     private Vector3 capInitialPos;
     private Vector3 capPrePos;
     private float _targetTilt;
+    public BoilerGameView _view;
 
     private void Awake()
     {
@@ -45,21 +47,26 @@ public class BoilerManager : MonoBehaviour
     }
     private void Start()
     {
+        _view = GetComponent<BoilerGameView>();
+        _view.StartCapBoiling();
         mainCam = Camera.main;
         capPrePos = caps.transform.position;
         capInitialPos = caps.transform.position;
         soulBall.OnEscape += ExitBoilGame;
         soulBall.OnBoiled += ExitBoilGame;
+        DayManager.instance.OnNewDay += () =>
+        {
+            isSoulsRequires = true;
+        };
     }
 
 
     public async UniTask StartBoiderGame(Souls selectedSoul)
     {
-        Debug.Log("PlayStarted");
         _selectedSouls = selectedSoul;
         cameraMovement.isMoveable = false;
         cameraMovement.ResetCamera();
-        await ShowBoiderGamePanel();
+        await _view.ShowBoilingGamePanel();
         isBoilderGamePlaying = true;
         onBoiderGameStart?.Invoke();
         SoulsManager.Instance.RemoveSouls(_selectedSouls);
@@ -71,28 +78,17 @@ public class BoilerManager : MonoBehaviour
     {
         RemoveBonus();
         Debug.Log("GameExited");
-        await HideBoildGamePanel();
+        await _view.HideBoilingGamePanel();
+        _view.CloseCap();
         cameraMovement.isMoveable = true;
         isBoilderGamePlaying = false;
         isCapControlable = false;
         caps.transform.position = capInitialPos;
         onBoilerGameEnd?.Invoke();
-    }
-
-
-    private async UniTask HideBoildGamePanel()
-    {
-        await UniTask.Delay(1000);
-        //Here Some Animation
-        boiderGamePanel.SetActive(false);
-        if(DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota)
-        {
+        if (DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota)
             Success();
-        }
         else
-        {
             LoseGame();
-        }
     }
 
     private void LoseGame()
@@ -102,7 +98,8 @@ public class BoilerManager : MonoBehaviour
 
     private void Success()
     {
-        Debug.Log("Success");
+        isSoulsRequires = false;
+        _view.StopCapBoiling();
     }
 
     private void BonusApply()
@@ -134,12 +131,6 @@ public class BoilerManager : MonoBehaviour
         // Some Animation Here
         await UniTask.Delay(500);
         soulBall.isWorking = true;
-    }
-    private async UniTask ShowBoiderGamePanel()
-    {
-        //Some Visual Effect Here
-        boiderGamePanel.SetActive(true);
-        await UniTask.Delay(1000);
     }
     private void ControlCap()
     {

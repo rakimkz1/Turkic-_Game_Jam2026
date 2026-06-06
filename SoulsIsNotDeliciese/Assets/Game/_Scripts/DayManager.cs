@@ -21,6 +21,7 @@ public class DayManager : MonoBehaviour
     public void StartNewDay()
     {
         currentDay++;
+        OnNewDay?.Invoke();
         Debug.Log("Starting day " + currentDay);
     }
 }
