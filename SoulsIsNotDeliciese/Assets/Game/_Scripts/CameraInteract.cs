@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 public class CameraInteract : MonoBehaviour
 {
@@ -36,6 +34,10 @@ public class CameraInteract : MonoBehaviour
                 currentSouls.Grab();
                 isGrabingSoul = true;
             }
+            if(hit.collider != null && hit.collider.gameObject.tag == "Kalendar")
+            {
+                hit.collider.GetComponent<Kalendar>().Activate();
+            }
         }
         if (isGrabingSoul)
         {
@@ -50,7 +52,7 @@ public class CameraInteract : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                if (hit.collider != null && hit.collider.tag == "Boilder")
+                if (hit.collider != null && hit.collider.tag == "Boiler")
                 {
                     BoilerManager.Instance.StartBoiderGame(currentSouls.InitialSoul);
                     isGrabingSoul = false;

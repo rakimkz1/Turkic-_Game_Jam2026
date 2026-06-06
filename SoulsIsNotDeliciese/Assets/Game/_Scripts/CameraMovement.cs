@@ -5,6 +5,7 @@ public class CameraMovement : MonoBehaviour
     public Vector2 movementSpeed;
     public Vector3 rotateLimits;
     public AnimationCurve movementCurve;
+    public bool isMoveable = true;
 
     private Vector3 initialRotate;
     private Vector3 intialPosition;
@@ -16,6 +17,9 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!isMoveable)
+            return;
+
         Vector3 movePostion = intialPosition;
         Vector3 rotateRotation = initialRotate;
         float xMovement = Input.mousePosition.x / Screen.width;
@@ -27,5 +31,10 @@ public class CameraMovement : MonoBehaviour
         rotateRotation += Vector3.forward * rotateLimits.z * movementCurve.Evaluate(xMovement);
         transform.position = movePostion;
         transform.eulerAngles = rotateRotation;
+    }
+    public void ResetCamera()
+    {
+        transform.position = intialPosition;
+        transform.eulerAngles = initialRotate;
     }
 }

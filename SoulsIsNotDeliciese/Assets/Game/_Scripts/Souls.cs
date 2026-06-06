@@ -8,7 +8,11 @@ public class Souls : ScriptableObject
     public string bonusDescription;
 
 
-    public virtual void Bonus()
+    public virtual void Bonus(BoilerManager boilerManager)
+    {
+
+    }
+    public virtual void RemoveBonus(BoilerManager boilerManager)
     {
 
     }
