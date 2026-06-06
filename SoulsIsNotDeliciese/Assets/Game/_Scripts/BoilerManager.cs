@@ -49,6 +49,7 @@ public class BoilerManager : MonoBehaviour
         capPrePos = caps.transform.position;
         capInitialPos = caps.transform.position;
         soulBall.OnEscape += ExitBoilGame;
+        soulBall.OnBoiled += ExitBoilGame;
     }
 
 

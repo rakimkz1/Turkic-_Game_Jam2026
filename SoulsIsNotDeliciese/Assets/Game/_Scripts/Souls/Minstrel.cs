@@ -1,15 +1,23 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Minstrel", menuName = "Souls/Minstrel")]
 public class Minstrel : Souls
 {
+    public float returnChance;
     public override void Bonus(BoilerManager boilerManager)
     {
-        Debug.Log("Minstrel Bonus Activated");
+        boilerManager.soulBall.isMinistalAllowEscape = ReturnBall;
+    }
+    public bool ReturnBall()
+    {
+        if(Random.value < returnChance)
+        {
+            return false;
+        }
+        return true;
     }
     public override void RemoveBonus(BoilerManager boilerManager)
     {
-        Debug.Log("Minstrel Bonus Removed");
+        boilerManager.soulBall.isMinistalAllowEscape = null;
     }
 }

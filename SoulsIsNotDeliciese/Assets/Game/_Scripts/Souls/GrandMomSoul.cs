@@ -4,12 +4,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GrandMom", menuName = "Souls/GrandMom")]
 public class GrandMomSoul : Souls
 {
+    public float tiltRecude;
     public override void Bonus(BoilerManager boilerManager)
     {
-        Debug.Log("GrandMomBonus");
+        boilerManager.capMaxTiltAngle *= tiltRecude;
     }
     public override void RemoveBonus(BoilerManager boilerManager)
     {
-        base.RemoveBonus(boilerManager);
+        boilerManager.capMaxTiltAngle /= tiltRecude;
     }
 }
