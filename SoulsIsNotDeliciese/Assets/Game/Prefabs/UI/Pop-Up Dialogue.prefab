@@ -171,8 +171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 189.56, y: -66.509995}
-  m_SizeDelta: {x: 349.12, y: 0}
+  m_AnchoredPosition: {x: 113.76, y: -41}
+  m_SizeDelta: {x: 197.52, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6580461850059293182
 CanvasRenderer:
@@ -202,14 +202,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'sadasd
+  m_text: 'Hello my Friend!
 
-    asdsadasdasdasdads
-
-    asdasd'
+    Welcome to HELL'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 659b63e3cd28a024ca7d5069a0629897, type: 2}
+  m_sharedMaterial: {fileID: 2507369538439461828, guid: 659b63e3cd28a024ca7d5069a0629897, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -239,11 +237,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -2.01
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0

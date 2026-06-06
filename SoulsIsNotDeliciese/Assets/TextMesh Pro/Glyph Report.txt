@@ -1,0 +1,44 @@
+Font: Mr. Lonely  Style: Regular
+Point Size: 88   Padding: 9   SP/PD Ratio: 10,2%
+
+Characters included: 161/193
+Missing characters: 32
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 1024	Hex: 400	Char [Ѐ]
+ID: 1026	Hex: 402	Char [Ђ]
+ID: 1027	Hex: 403	Char [Ѓ]
+ID: 1028	Hex: 404	Char [Є]
+ID: 1029	Hex: 405	Char [Ѕ]
+ID: 1030	Hex: 406	Char [І]
+ID: 1031	Hex: 407	Char [Ї]
+ID: 1032	Hex: 408	Char [Ј]
+ID: 1033	Hex: 409	Char [Љ]
+ID: 1034	Hex: 40A	Char [Њ]
+ID: 1035	Hex: 40B	Char [Ћ]
+ID: 1036	Hex: 40C	Char [Ќ]
+ID: 1037	Hex: 40D	Char [Ѝ]
+ID: 1038	Hex: 40E	Char [Ў]
+ID: 1039	Hex: 40F	Char [Џ]
+ID: 1104	Hex: 450	Char [ѐ]
+ID: 1106	Hex: 452	Char [ђ]
+ID: 1107	Hex: 453	Char [ѓ]
+ID: 1108	Hex: 454	Char [є]
+ID: 1109	Hex: 455	Char [ѕ]
+ID: 1110	Hex: 456	Char [і]
+ID: 1111	Hex: 457	Char [ї]
+ID: 1112	Hex: 458	Char [ј]
+ID: 1113	Hex: 459	Char [љ]
+ID: 1114	Hex: 45A	Char [њ]
+ID: 1115	Hex: 45B	Char [ћ]
+ID: 1116	Hex: 45C	Char [ќ]
+ID: 1117	Hex: 45D	Char [ѝ]
+ID: 1118	Hex: 45E	Char [ў]
+ID: 1119	Hex: 45F	Char [џ]
+ID: 1168	Hex: 490	Char [Ґ]
+ID: 1169	Hex: 491	Char [ґ]
+
+Characters excluded from packing:
+----------------------------------------
