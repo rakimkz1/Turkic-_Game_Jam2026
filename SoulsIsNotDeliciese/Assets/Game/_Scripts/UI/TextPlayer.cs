@@ -10,6 +10,8 @@ public class TextPlayer
 	public TextMeshProUGUI Text;
 	public State CurrentState => currentState;
 
+	public event Action OnTextClosed, OnTextingEnd;
+
 	private float playingTime = 1f;
 	private float secondsPerLetter = 0.1f;
 	private float keepDuration = 10f;
@@ -39,28 +41,28 @@ public class TextPlayer
 		string content,
 		float speed,
 		float keepDuration,
-		bool useSecondsPerLetter = false,
+		TextingType textingType,
 		bool showImmediatelyAfterSkip = false)
 	{
 		this.keepDuration = keepDuration;
 
-		if (useSecondsPerLetter)
+		if (textingType == TextingType.SecondsPerLetter)
 			secondsPerLetter = speed;
 		else
 			playingTime = speed;
 
-		SkipOrPlay(content, useSecondsPerLetter, showImmediatelyAfterSkip);
+		SkipOrPlay(content, textingType, showImmediatelyAfterSkip);
 	}
 
 	public void SkipOrPlay(
 		string content,
-		bool useSecondsPerLetter = false,
+		TextingType textingType,
 		bool showImmediatelyAfterSkip = false)
 	{
 		switch (currentState)
 		{
 			case State.Nothing:
-				StartPlaying(content, useSecondsPerLetter);
+				StartPlaying(content, textingType);
 				break;
 
 			case State.Playing:
@@ -68,12 +70,12 @@ public class TextPlayer
 
 				if (showImmediatelyAfterSkip)
 				{
-					StartPlaying(content, useSecondsPerLetter);
+					StartPlaying(content, textingType);
 				}
 				break;
 
 			case State.Showing:
-				StartPlaying(content, useSecondsPerLetter);
+				StartPlaying(content, textingType);
 				break;
 		}
 	}
@@ -84,12 +86,13 @@ public class TextPlayer
 
 		currentState = State.Nothing;
 		currentFullContent = string.Empty;
+		OnTextClosed?.Invoke();
 
 		if (Text != null)
 			Text.text = string.Empty;
 	}
 
-	private void StartPlaying(string content, bool useSecondsPerLetter)
+	private void StartPlaying(string content, TextingType textingType)
 	{
 		CancelCurrentTask();
 
@@ -100,7 +103,7 @@ public class TextPlayer
 
 		_ = PlayAsync(
 			content,
-			useSecondsPerLetter,
+			textingType,
 			cts.Token);
 	}
 
@@ -114,7 +117,7 @@ public class TextPlayer
 
 	private async UniTaskVoid PlayAsync(
 		string fullContent,
-		bool useSecondsPerLetter,
+		TextingType textingType,
 		CancellationToken token)
 	{
 		try
@@ -127,7 +130,7 @@ public class TextPlayer
 				return;
 			}
 
-			float duration = useSecondsPerLetter
+			float duration = textingType == TextingType.SecondsPerLetter
 				? secondsPerLetter * fullContent.Length
 				: playingTime;
 
@@ -151,6 +154,7 @@ public class TextPlayer
 
 			Text.text = fullContent;
 			currentState = State.Showing;
+			OnTextingEnd?.Invoke();
 
 			await UniTask.WaitForSeconds(
 				keepDuration,
@@ -182,5 +186,11 @@ public class TextPlayer
 		Nothing,
 		Showing,
 		Playing
+	}
+
+	public enum TextingType
+	{
+		SecondsPerLetter,
+		SecondsForWholeText
 	}
 }

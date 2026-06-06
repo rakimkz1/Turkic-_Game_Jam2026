@@ -18,12 +18,12 @@ public class DialogueManager : MonoBehaviour
 	[ContextMenu("Play the Content with Texting Time")]
 	public void PlayTextingTime()
 	{
-		textPlayer.SkipOrPlay(content, TextingTime, WaitTime, false);
+		textPlayer.SkipOrPlay(content, TextingTime, WaitTime, TextPlayer.TextingType.SecondsForWholeText);
 	}
 
 	[ContextMenu("Play the Content with Seconds per Letter")]
 	public void PlaySecondsPerLetter()
 	{
-		textPlayer.SkipOrPlay(content, SecondPerLetter, WaitTime, true);
+		textPlayer.SkipOrPlay(content, SecondPerLetter, WaitTime, TextPlayer.TextingType.SecondsPerLetter);
 	}
 }
