@@ -28,7 +28,7 @@ public class SoulItems : MonoBehaviour
     public void Grab()
     {
         isGrabed = true;
-        GetComponent<Collider>().isTrigger = true;
+        GetComponent<Collider>().enabled = false;
     }
 
     public void Return()
@@ -36,5 +36,6 @@ public class SoulItems : MonoBehaviour
         isGrabed = false;
         transform.position = intialPos;
         transform.rotation = initialRot;
+        GetComponent<Collider>().enabled = true;
     }
 }

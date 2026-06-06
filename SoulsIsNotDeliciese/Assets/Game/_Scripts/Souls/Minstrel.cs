@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GrandMom", menuName = "Souls/GrandMom")]
-public class GrandMomSoul : Souls
+[CreateAssetMenu(fileName = "Minstrel", menuName = "Souls/Minstrel")]
+public class Minstrel : Souls
 {
     public override void Bonus(BoilerManager boilerManager)
     {
-        Debug.Log("GrandMomBonus");
+        Debug.Log("Minstrel Bonus Activated");
     }
     public override void RemoveBonus(BoilerManager boilerManager)
     {
-        base.RemoveBonus(boilerManager);
+        Debug.Log("Minstrel Bonus Removed");
     }
 }
