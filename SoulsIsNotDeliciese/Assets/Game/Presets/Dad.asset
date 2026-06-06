@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7685d6df252bcaf469e83042a64f6d39, type: 3}
   m_Name: Dad
   m_EditorClassIdentifier: Assembly-CSharp::Dad
-  name: 
-  replices: []
+  name: Dad
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   speedBonus: 1.2
   tiltMaxAngleBonus: 1.3

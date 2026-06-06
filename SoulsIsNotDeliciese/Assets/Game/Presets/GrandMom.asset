@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: GrandMom
   m_EditorClassIdentifier: Assembly-CSharp::GrandMomSoul
   name: GrandMom
-  replices: []
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   tiltRecude: 0.01

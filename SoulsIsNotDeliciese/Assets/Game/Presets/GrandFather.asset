@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6657bd507c167b04d891725e055deac7, type: 3}
   m_Name: GrandFather
   m_EditorClassIdentifier: Assembly-CSharp::GrandFather
-  name: 
-  replices: []
+  name: GrandFather
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   chanceToExecute: 0.15
   slowDownNumber: 0.75

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e60d74fe4bd6a41be955446d44e70b, type: 3}
   m_Name: Batir
   m_EditorClassIdentifier: Assembly-CSharp::Batir
-  name: 
-  replices: []
+  name: Batir
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   damageFromCap: 0.8

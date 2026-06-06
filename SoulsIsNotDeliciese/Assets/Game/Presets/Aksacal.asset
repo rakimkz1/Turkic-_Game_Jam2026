@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4f262a1aa38324dbaa9c5bb2e08f90, type: 3}
   m_Name: Aksacal
   m_EditorClassIdentifier: Assembly-CSharp::Aksacal
-  name: 
-  replices: []
+  name: Aksakal
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   wallSizeBonus: 1.2

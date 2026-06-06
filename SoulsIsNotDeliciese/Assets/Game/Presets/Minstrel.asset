@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d457f7b7cfc4e47970b95b99339463, type: 3}
   m_Name: Minstrel
   m_EditorClassIdentifier: Assembly-CSharp::Minstrel
-  name: 
-  replices: []
+  name: Minstrel
+  IdleReplices: []
+  HoverReplices: []
+  DragReplices: []
+  PutInReplices: []
   bonusDescription: 
   returnChance: 0.3

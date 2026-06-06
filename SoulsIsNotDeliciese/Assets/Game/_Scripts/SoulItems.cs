@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
-public class SoulItems : MonoBehaviour
+public class SoulItems : MonoBehaviour, IPointerEnterHandler
 {
     public Souls InitialSoul;
     public float distanceFromCamera;
@@ -18,6 +19,7 @@ public class SoulItems : MonoBehaviour
         initialRot = transform.rotation;
         intialPos = transform.position;
         mainCam = Camera.main;
+        InitialSoul.Reset();
     }
 
     public void Init(Souls soul)
@@ -38,4 +40,9 @@ public class SoulItems : MonoBehaviour
         transform.rotation = initialRot;
         GetComponent<Collider>().enabled = true;
     }
+
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+        PopUpManager.instance?.Create(InitialSoul.name, InitialSoul.GetHoverReplices());
+	}
 }

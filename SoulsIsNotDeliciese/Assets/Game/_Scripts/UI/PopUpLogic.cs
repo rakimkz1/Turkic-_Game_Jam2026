@@ -23,6 +23,12 @@ public class PopUpLogic : MonoBehaviour
 		textPlayer.OnTextClosed += Destroy;
 	}
 
+	private void Update()
+	{
+		Vector3 Direction = transform.position - Camera.main.transform.position;
+		transform.rotation = Quaternion.LookRotation(Direction);
+	}
+
 	private void Destroy()
 	{
 		Destroy(gameObject);
