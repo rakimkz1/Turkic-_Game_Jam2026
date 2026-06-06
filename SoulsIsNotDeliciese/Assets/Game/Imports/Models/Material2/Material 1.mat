@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wood
+  m_Name: Material 1
   m_Shader: {fileID: -6465566751694194690, guid: 55e01536b942183409dbc110928938d4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -100,7 +100,7 @@ Material:
     - _EmmissionMultiplier: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.39285713
+    - _Glossiness: 0.23636365
     - _GlossyReflections: 1
     - _HASTEXTURE: 0
     - _Metallic: 0
@@ -122,15 +122,15 @@ Material:
     - _YOffset: -9.56
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.2411997, g: 0.15398714, b: 0.09485822, a: 1}
+    - _BaseColor: {r: 0.41205853, g: 0.27111787, b: 0.19619673, a: 1}
     - _Color: {r: 0.19607842, g: 0.4343896, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _MainColor: {r: 0.24313727, g: 0.15294118, b: 0.09411766, a: 1}
+    - _MainColor: {r: 0.41176474, g: 0.27058825, b: 0.19607845, a: 1}
     - _MinMax: {r: 0.1, g: 0.4, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &778473593630121744
+--- !u!114 &6583453782326319408
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

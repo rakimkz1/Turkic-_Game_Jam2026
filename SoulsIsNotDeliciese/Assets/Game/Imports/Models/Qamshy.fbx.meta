@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Gold.001
+    second: {fileID: 2100000, guid: 181ae29669d4475428727074f9a46fb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material.001
     second: {fileID: 2100000, guid: c1fca21098a25344daf2f3e853a961a6, type: 2}
   - first:
@@ -22,12 +27,32 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 95b6e0713c6f0d84e829f0272e4e44ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: 9ff80bdbbf7c6f0469a40386c30639fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Robe
     second: {fileID: 2100000, guid: cb85e1ebc63932246b8d64fad90b9d92, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Robe.001
+    second: {fileID: 2100000, guid: cb85e1ebc63932246b8d64fad90b9d92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wood
+    second: {fileID: 2100000, guid: abb32a2b0181b76458dc0024766a6cff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.001
     second: {fileID: 2100000, guid: abb32a2b0181b76458dc0024766a6cff, type: 2}
   materials:
     materialImportMode: 2

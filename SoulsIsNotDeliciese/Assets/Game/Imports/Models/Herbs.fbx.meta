@@ -3,7 +3,12 @@ guid: 452652fcff43c414b83bcc4b8b549056
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T_GreenHerb
+    second: {fileID: 2100000, guid: b043769469d19e74a808084dcfe5fd07, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
