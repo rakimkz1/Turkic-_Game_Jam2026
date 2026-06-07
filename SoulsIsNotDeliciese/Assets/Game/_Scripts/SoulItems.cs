@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-public class SoulItems : MonoBehaviour, IPointerEnterHandler
+public class SoulItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Souls InitialSoul;
     public float distanceFromCamera;
     public SoundPackage grabSound;
     public SoundPackage throwSound;
     public SoundPackage itemSound;
+    public GameObject discription;
 
     private Vector3 intialPos;
     private Quaternion initialRot;
@@ -17,8 +18,9 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
     private Camera mainCam;
 
     private void Start()
-    {
-        initialRot = transform.rotation;
+	{
+		discription.SetActive(false);
+		initialRot = transform.rotation;
         intialPos = transform.position;
         mainCam = Camera.main;
         InitialSoul.Reset();
@@ -46,7 +48,8 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
         isGrabed = true;
         GetComponent<Collider>().enabled = false;
         AudioManager.instance.PlayOneShot(grabSound);
-    }
+		discription.SetActive(false); 
+	}
 
     public void Return()
     {
@@ -61,5 +64,12 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
 	{
         PopUpManager.instance?.Create(InitialSoul.name, InitialSoul.GetHoverReplices());
         AudioManager.instance.PlayOneShot(itemSound);
+        if (!isGrabed) { discription.SetActive(true); }
+        
+	}
+
+	public void OnPointerExit(PointerEventData eventData)
+	{
+		discription.SetActive(false);
 	}
 }
