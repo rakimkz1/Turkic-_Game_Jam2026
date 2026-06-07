@@ -1034,6 +1034,12 @@ MonoBehaviour:
   candleCam: {fileID: 1725216169}
   blackBackgroundPanel: {fileID: 1246012386}
   nextDayText: {fileID: 0}
+  candleBreath:
+    audioClip: {fileID: 0}
+    volume: 0
+  reject:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!65 &308376538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1898,6 +1904,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 40a7f34201b02ac4ab284e52d51801af, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!1001 &487032416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2489,9 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796098d7030063b45b6ea7cadeccc0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  itemAudio: {fileID: 127864149}
-  grabAudio: {fileID: 176851514}
-  throwAudio: {fileID: 1083817357}
+  audioSource: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +3109,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 8bdcddc7bb8c48544ba9c3d3ca3b3ee7, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!135 &933417621
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3724,6 +3746,15 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   escapeLine: 0.4
   isWorking: 0
+  capHitSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  metalHitSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  afterSteamSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!212 &1052016524
 SpriteRenderer:
   serializedVersion: 2
@@ -4809,6 +4840,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1530537284711207579, guid: 3dae695bfae0a2d4ca2bebb4d07f6cc4, type: 3}
   m_PrefabInstance: {fileID: 1276802501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1276802503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1893795440972245147, guid: 3dae695bfae0a2d4ca2bebb4d07f6cc4, type: 3}
+  m_PrefabInstance: {fileID: 1276802501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1290148746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,6 +4885,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 5a46284292cc0284698a949846ecb279, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!135 &1290148748
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5612,8 +5663,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Demon
   textPlayer:
-    Text: {fileID: 0}
-  replices: []
+    Text: {fileID: 1276802503}
+  speed: 0.05
+  waitTime: 5
+  replices:
+  - DayStartReplices:
+    - "\u0412\u0430\u0430!!!"
+    - "\u0414\u043E\u0431\u0440\u043E\u0435 \u0443\u0442\u0440\u043E, \u041B\u043E\u0448\u0430\u0440\u0430!
+      \u041E\u0439, \u044F \u043E\u0448\u0438\u0431\u0441\u044F, \u044F \u0438\u043C\u0435\u043B
+      \u0432\u0432\u0438\u0434\u0443... \u041D\u043E\u0447\u044C! \u0414\u0430!"
+    - "\u0427\u0435\u0433\u043E \u0445\u043C\u0443\u0440\u044B\u0439 \u0442\u0430\u043A\u043E\u0439,
+      \u043D\u0435 \u0443\u0437\u043D\u0430\u0435\u0448\u044C \u044D\u0442\u043E
+      \u043C\u0435\u0441\u0442\u043E? \u042D\u0442\u043E \u0436\u0435 \u0442\u0432\u043E\u0439
+      \u0434\u043E\u043C, \u0411\u0430\u043B\u0431\u0435\u0441!"
+    - "\u041D\u0443 \u0438 \u0434\u0435\u0440\u044C\u043C\u043E. \u0425\u0432\u0430\u0442\u0438\u0442
+      \u0441\u0447\u0438\u0442\u0430\u0442\u044C \u043E\u0432\u0435\u0446 \u043D\u0430
+      \u043D\u0435\u0431\u0435 \u0438 \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C
+      \u043C\u043D\u0435 \u0447\u0442\u043E \u043D\u0438 \u0431\u0443\u0434\u044C."
+    - "\u0418 \u0447\u0435\u0433\u043E \u0441\u0442\u043E\u0438\u0448\u044C? \u0414\u0443\u043C\u0430\u0435\u0448\u044C
+      \u043C\u043E\u0436\u0435\u0448\u044C \u043C\u043D\u0435 \u043F\u0435\u0440\u0435\u0447\u0438\u0442\u044C? "
+    - "\u0425\u0430\u0445, \u044F \u0431\u044B \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u043B
+      \u043D\u0430 \u0442\u0432\u043E\u044E \u043D\u0435\u0441\u0433\u0438\u0431\u0430\u0435\u043C\u043E\u0441\u0442\u044C
+      \u043A\u043E\u0433\u0434\u0430 \u0442\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
+      \u0441\u0432\u043E\u044E \u0441\u0435\u043C\u044C\u044E."
+    - "\u0414\u0430-\u0434\u0430, \u0442\u0432\u043E\u044F \u0441\u0435\u043C\u044C\u044F
+      \u0442\u0443\u0442! \u0412\u0441\u0435 \u0441\u0435\u043C\u0435\u0440\u043E,
+      \u043A\u0430\u043A \u0442\u0435 \u043A\u043E\u0437\u043B\u044F\u0442\u0430.
+      \u0410 \u044F \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u0442\u0441\u044F
+      \u0432\u043E\u043B\u043A."
+    - "\u041E, \u0443\u0436\u0435 \u0440\u0432\u0435\u0448\u044C\u0441\u044F \u0438
+      \u043C\u0435\u0447\u0435\u0448\u044C? \u0420\u0430\u0434 \u0441\u043B\u044B\u0448\u0430\u0442\u044C,
+      \u0442\u043E\u0433\u0434\u0430 \u0442\u044B \u0437\u043D\u0430\u0435\u0448\u044C
+      \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0442\u044C, \u044F \u043F\u0440\u043E\u0433\u043E\u043B\u043E\u0434\u0430\u043B\u0441\u044F."
+    - "... \u0422\u044B \u0447\u0442\u043E, \u043D\u0438\u043A\u043E\u0433\u0434\u0430
+      \u0432 \u0436\u0438\u0437\u043D\u0438 \u043D\u0435 \u0433\u043E\u0442\u043E\u0432\u0438\u043B?"
+    - "\u0412\u043E\u0442 \u0436\u0435 \u0436 \u0431\u0435\u0441\u0442\u043E\u043B\u043E\u0447\u044C,
+      \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F \u0442\u0435\u0431\u044F \u0432\u0441\u0435\u043C\u0443
+      \u043E\u0431\u0443\u0447\u0430\u0442\u044C."
+    - "\u0418 \u0442\u0430\u043A, \u0441\u043B\u0443\u0448\u0430\u0439 \u0441\u044E\u0434\u0430,
+      \u041B\u043E\u0448\u0430\u0440\u0430, \u0441\u043F\u0440\u0430\u0432\u0430
+      \u043E\u0442 \u0442\u0435\u0431\u044F \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
+      \u043F\u043E\u043B\u043A\u0430, \u0433\u0434\u0435 \u043F\u043E\u043A\u043E\u044F\u0442\u0441\u044F
+      \u0442\u0432\u043E\u0438 \u043F\u0440\u0435\u0434\u043A\u0438."
+    - "\u041A\u0430\u0436\u0434\u044B\u0439 \u0438\u0437 \u043D\u0438\u0445 \u0434\u0430\u0435\u0442
+      \u0442\u0435\u0431\u0435 \u0441\u0438\u043B\u0443, \u0443\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u0443\u044E.
+      \u0412\u044B\u0431\u0435\u0440\u0438 \u0442\u0443 \u043A\u043E\u0442\u043E\u0440\u0443\u044E
+      \u043D\u0435 \u0436\u0430\u043B\u043A\u043E \u0438 \u0437\u0430\u043A\u0438\u0434\u044B\u0432\u0430\u0439
+      \u0432 \u043A\u043E\u0442\u0435\u043B."
+    - "\u0418 \u043F\u043E\u0431\u044B\u0441\u0442\u0440\u0435\u0435! \u042F \u0433\u043E\u043B\u043E\u0434\u0435\u043D
+      \u0438 \u0433\u043E\u0442\u043E\u0432 \u0441\u044A\u0435\u0441\u0442\u044C
+      \u0441\u0435\u043C\u0435\u0440\u044B\u0445 \u0442\u0432\u043E\u0438\u0445 \u0441\u0435\u043C\u044C\u0438,
+      \u0435\u0441\u043B\u0438 \u0442\u044B \u043D\u0435 \u043F\u043E\u0442\u043E\u0440\u043E\u043F\u0438\u0448\u044C\u0441\u044F!"
+    FoodEndReplices:
+    - "\u0423\u0443\u0443\u0445\u0445, \u0432\u044B\u0448\u043B\u043E \u043E\u0447\u0435\u043D\u044C
+      \u0434\u0430\u0436\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u043D\u043E!
+      \u0418\u0437 \u0442\u0435\u0431\u044F \u0445\u043E\u0440\u043E\u0448\u0438\u0439
+      \u043F\u043E\u0432\u0430\u0440, \u0410?!"
+    - "\u0418 \u0447\u0435\u0433\u043E \u0442\u044B \u0442\u0430\u043A \u0440\u0430\u0441\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F?
+      \u0427\u0435, \u043F\u0440\u0435\u0434\u043A\u043E\u0432 \u0436\u0430\u043B\u043A\u043E
+      \u0441\u0442\u0430\u043B\u043E? "
+    - "\u0414\u0430 \u0437\u0430\u0431\u0435\u0439 \u0442\u044B \u043D\u0430 \u043D\u0438\u0445.
+      \u041E\u043D\u0438 \u0441\u0432\u043E\u0435 \u0443\u0436\u0435 \u043F\u0440\u043E\u0436\u0438\u043B\u0438,
+      \u0438 \u043F\u0443\u0441\u043A\u0430\u0439 \u0443\u0436\u0435 \u043E\u043A\u043E\u043D\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E
+      \u0441\u0433\u0438\u043D\u0443\u0442! \u0410 \u0442\u0435\u0431\u0435 \u043D\u0430\u0434\u043E
+      \u0441\u0432\u043E\u044E \u0448\u043A\u0443\u0440\u0443 \u0441\u043F\u0430\u0441\u0430\u0442\u044C!"
+    - "\u041D\u0443... \u0421\u0432\u043E\u044E \u0441\u0435\u043C\u044C\u044E, \u0434\u0430."
+    - "\u041B\u0430\u0434\u043D\u043E, \u043F\u0440\u043E\u0435\u0445\u0430\u043B\u0438.
+      \u0412\u0438\u0434\u0438\u0448\u044C \u0442\u0443 \u0441\u0432\u0435\u0447\u043A\u0443?
+      \u0421\u0434\u0443\u0439 \u043A\u0430 \u043E\u0434\u043D\u0443 \u0438\u0437
+      \u0435\u0433\u043E \u043F\u043B\u0430\u043C\u0435\u043D\u0435\u0439."
+    - "\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E \u0441\u0442\u0430\u043B\u043E
+      \u0447\u0442\u043E \u0437\u0430 \u0441\u0432\u0435\u0447\u0430? "
+    - "\u041D\u0443, \u0442\u0430\u043A\u043E\u043C\u0443 \u0442\u0443\u043F\u043E\u043C\u0443
+      \u043A\u0430\u043A \u0442\u044B, \u0441\u043B\u043E\u0436\u043D\u043E \u0431\u0443\u0434\u0435\u0442
+      \u0434\u043E\u0442\u044F\u043D\u0443\u0442\u044C\u0441\u044F \u0434\u043E \u043C\u043E\u0438\u0445
+      \u0433\u0435\u043D\u0438\u0430\u043B\u044C\u043D\u044B\u0445 \u043C\u044B\u0441\u043B\u0435\u0439,
+      \u043D\u043E \u044D\u0442\u043E \u043C\u043E\u044F \u043B\u0438\u0447\u043D\u0430\u044F
+      \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430. "
+    - "\u041A\u0430\u0436\u0434\u044B\u0439 \u0434\u0435\u043D\u044C \u043D\u0430\u0434\u043E
+      \u0441\u0434\u0443\u0432\u0430\u0442\u044C \u043F\u043E \u043E\u0434\u043D\u043E\u0439
+      \u0438 \u043A\u043E\u0433\u0434\u0430 \u0432\u0441\u0435 \u043F\u043B\u0430\u043C\u0435\u043D\u0438
+      \u0443\u0433\u0430\u0441\u043D\u0443\u0442, \u044D\u0442\u043E \u0431\u0443\u0434\u0435\u0442
+      \u043E\u0437\u043D\u0430\u0447\u0430\u0442\u044C \u043A\u043E\u043D\u0435\u0446
+      \u043D\u043E\u0432\u043E\u043B\u0443\u043D\u0438\u044E. \u0410 \u0437\u043D\u0430\u0447\u0438\u0442
+      \u0438 \u043A\u043E\u043D\u0435\u0446 \u043C\u043E\u0435\u0439 \u0441\u0432\u043E\u0431\u043E\u0434\u0435..."
+    - "... \u0410\u0436 \u043D\u0430 \u0441\u043B\u0435\u0437\u0443 \u043F\u0440\u043E\u0431\u0438\u043B\u043E...
+      \u041E\u0442\u0441\u0442\u0430\u0432\u0438\u0442\u044C!"
+    - "\u041F\u043E\u0442\u0443\u0448\u0438 \u0442\u044B \u044D\u0442\u0443 \u0433\u0440\u0435\u0431\u0430\u043D\u043D\u0443\u044E
+      \u0441\u0432\u0435\u0447\u043A\u0443 \u0438 \u043F\u043E\u0439\u0434\u0435\u043C
+      \u0443\u0436\u0435 \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439
+      \u0434\u0435\u043D\u044C!"
+  IsPlayingReplices: 0
 --- !u!1001 &1504347076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7031,6 +7171,9 @@ MonoBehaviour:
   isBoilderGamePlaying: 0
   isCapControlable: 0
   isSoulsRequires: 1
+  successSound:
+    audioClip: {fileID: 0}
+    volume: 0
   boiderGamePanel: {fileID: 844706785}
   caps: {fileID: 1589958542}
   capMoveSpeed: 3
@@ -7043,6 +7186,7 @@ MonoBehaviour:
   soulBallAccelerationPerHit: 0.2
   soulBallDamagePerHit: 6
   soulBallMaxHealth: 100
+  maxSpeed: 0
   capLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -7083,6 +7227,7 @@ MonoBehaviour:
   blackBackGround: {fileID: 1246012386}
   BoilGamePanel: {fileID: 844706786}
   throwPower: 1
+  boilingSound: {fileID: 0}
 --- !u!1 &1840681356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,6 +7262,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 739a591a495f4444daee6e0ab22bad96, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!135 &1840681358
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7246,6 +7400,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 035455630aff35741a55cb77060a8dc9, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!135 &1844539089
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8109,6 +8272,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoulItems
   InitialSoul: {fileID: 11400000, guid: 11d16e127a51d3343ab8a4f4a069103d, type: 2}
   distanceFromCamera: 2
+  grabSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  throwSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  itemSound:
+    audioClip: {fileID: 0}
+    volume: 0
 --- !u!135 &2146765201
 SphereCollider:
   m_ObjectHideFlags: 0
