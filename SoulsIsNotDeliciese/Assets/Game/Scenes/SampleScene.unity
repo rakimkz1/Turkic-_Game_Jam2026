@@ -6407,7 +6407,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4ea7483867375b942a74f3b9c7ea73e3, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: -1.05
   Loop: 0
@@ -6957,6 +6957,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
+      propertyPath: demonSpeech
+      value: 
+      objectReference: {fileID: 1239125342}
     - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
       propertyPath: replices.Array.data[0].DayStartReplices.Array.data[0].AnimPos
       value: DemonAppear
