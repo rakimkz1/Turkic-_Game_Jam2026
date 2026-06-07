@@ -3,7 +3,17 @@ guid: 1a28585712a16aa44be7f798b0023f4c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chert.001
+    second: {fileID: 2100000, guid: ad410ccb9ac4a594db64d9d996b2c230, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 6bbbd41a7cdc7a445b1e7e8bf442d765, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -32,6 +32,7 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
     {
         isGrabed = true;
         GetComponent<Collider>().enabled = false;
+        AudioManager.instance?.PlayGrabAudio();
     }
 
     public void Return()
@@ -40,10 +41,12 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
         transform.DOMove(intialPos, 1f);;
         transform.DORotateQuaternion(initialRot, 1f);
         GetComponent<Collider>().enabled = true;
+        AudioManager.instance?.PlayThrowAudio();
     }
 
-	public void OnPointerEnter(PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
 	{
         PopUpManager.instance?.Create(InitialSoul.name, InitialSoul.GetHoverReplices());
+        AudioManager.instance?.PlayItemAudio();
 	}
 }

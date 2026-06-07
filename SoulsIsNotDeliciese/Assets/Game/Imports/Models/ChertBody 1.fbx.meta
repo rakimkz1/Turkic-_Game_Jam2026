@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f1809adc4bff4446a35c922e68c9b54
+guid: 23ab73445d2a3d346acef8babc8ffd35
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Chert
     second: {fileID: 2100000, guid: ad410ccb9ac4a594db64d9d996b2c230, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 6bbbd41a7cdc7a445b1e7e8bf442d765, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
