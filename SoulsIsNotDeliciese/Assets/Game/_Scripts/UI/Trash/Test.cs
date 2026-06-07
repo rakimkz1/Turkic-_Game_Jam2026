@@ -8,8 +8,13 @@ public class Test : MonoBehaviour
 
     void Update()
     {
-		Vector2 targetPosition = Camera.main.WorldToScreenPoint(target.position);
+		/*Vector2 targetPosition = Camera.main.WorldToScreenPoint(target.position);
 		image.position = targetPosition;
-		Debug.Log(targetPosition);
+		Debug.Log(targetPosition);*/
+	}
+
+	private void OnDestroy()
+	{
+		Debug.Log("DESTROY");
 	}
 }

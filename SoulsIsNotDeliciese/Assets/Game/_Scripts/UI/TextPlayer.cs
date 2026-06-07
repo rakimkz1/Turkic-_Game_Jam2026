@@ -37,7 +37,7 @@ public class TextPlayer
 		Text.text = string.Empty;
 	}
 
-	public void SkipOrPlay(
+	public async UniTask SkipOrPlay(
 		string content,
 		float speed,
 		float keepDuration,
@@ -51,10 +51,10 @@ public class TextPlayer
 		else
 			playingTime = speed;
 
-		SkipOrPlay(content, textingType, showImmediatelyAfterSkip);
+		await SkipOrPlay(content, textingType, showImmediatelyAfterSkip);
 	}
 
-	public void SkipOrPlay(
+	public async UniTask SkipOrPlay(
 		string content,
 		TextingType textingType,
 		bool showImmediatelyAfterSkip = false)
@@ -92,7 +92,7 @@ public class TextPlayer
 			Text.text = string.Empty;
 	}
 
-	private void StartPlaying(string content, TextingType textingType)
+	private async UniTask StartPlaying(string content, TextingType textingType)
 	{
 		CancelCurrentTask();
 
@@ -101,7 +101,7 @@ public class TextPlayer
 
 		cts = new CancellationTokenSource();
 
-		_ = PlayAsync(
+		await PlayAsync(
 			content,
 			textingType,
 			cts.Token);
@@ -115,7 +115,7 @@ public class TextPlayer
 		Text.text = currentFullContent;
 	}
 
-	private async UniTaskVoid PlayAsync(
+	private async UniTask PlayAsync(
 		string fullContent,
 		TextingType textingType,
 		CancellationToken token)

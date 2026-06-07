@@ -21,9 +21,21 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler
         intialPos = transform.position;
         mainCam = Camera.main;
         InitialSoul.Reset();
+
+        int activeState = PlayerPrefs.GetInt(InitialSoul.name, 1);
+        if (activeState != 1)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
-    public void Init(Souls soul)
+	private void OnDestroy()
+	{
+		int activeState = gameObject.activeSelf ? 1 : 0;
+        PlayerPrefs.SetInt(InitialSoul.name, activeState);
+	}
+
+	public void Init(Souls soul)
     {
         InitialSoul = soul;
     }

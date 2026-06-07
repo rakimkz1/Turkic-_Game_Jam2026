@@ -21,7 +21,7 @@ public class Kalendar : MonoBehaviour
     }
     public void Activate()
     {
-        if (DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota && DayManager.instance.currentDay > 3 && !_isAnim)
+        if (DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota && DayManager.instance.currentDay < 3 && !_isAnim)
             StartAnim();
         else
             Reject();

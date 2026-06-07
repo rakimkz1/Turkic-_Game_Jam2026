@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DemonKvotaManager : MonoBehaviour
@@ -9,6 +10,8 @@ public class DemonKvotaManager : MonoBehaviour
     public float maxKvota = 100f;
 
     public Image kvotaBar;
+
+    public event Action OnKvotaFilled;
 
     private void Awake()
     {
@@ -26,5 +29,10 @@ public class DemonKvotaManager : MonoBehaviour
     {
         todaysKvota += kvota;
         kvotaBar.fillAmount = todaysKvota / maxKvota;
+
+        if (todaysKvota >= maxKvota)
+        {
+            OnKvotaFilled?.Invoke();
+		}
     }
 }
