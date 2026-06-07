@@ -1,12 +1,12 @@
+using Cysharp.Threading.Tasks;
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
 	public static AudioManager instance;
-
-	public AudioSource itemAudio;
-	public AudioSource grabAudio;
-	public AudioSource throwAudio;
+	public AudioSource audioSource;
 
 	private void Awake()
 	{
@@ -19,28 +19,19 @@ public class AudioManager : MonoBehaviour
 			Destroy(instance);
 		}
 	}
-
-	public void PlayItemAudio()
+	public void PlayOneShot(SoundPackage sound)
 	{
-		PlayAudio(itemAudio);
+		audioSource.PlayOneShot(sound.audioClip, sound.volume);
 	}
-
-	public void PlayGrabAudio()
+	public async void PlayOneShotDelay(SoundPackage sound, float delay)
 	{
-		PlayAudio(grabAudio);
+		await UniTask.Delay((int)(delay * 1000));
+		audioSource.PlayOneShot(sound.audioClip, sound.volume);
 	}
-
-	public void PlayThrowAudio()
-	{
-		PlayAudio(throwAudio);
-	}
-
-	private void PlayAudio(AudioSource audio)
-	{
-		if (!audio.isPlaying)
-		{
-			audio.Stop();
-		}
-		audio.Play();
-	}
+}
+[Serializable]
+public class SoundPackage
+{
+	public AudioClip audioClip;
+	public float volume;
 }

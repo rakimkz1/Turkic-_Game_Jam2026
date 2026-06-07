@@ -13,6 +13,7 @@ public class BoilerGameView : MonoBehaviour
     public Image blackBackGround;
     public Transform BoilGamePanel;
     public float throwPower;
+    public AudioSource boilingSound;
 
     private Vector3 capInitialPos;
     private Quaternion capInitalRot;
@@ -29,6 +30,7 @@ public class BoilerGameView : MonoBehaviour
 
     public void StartCapBoiling()
     {
+        boilingSound.gameObject.SetActive(true);
         capBoilingTween = DOTween.Sequence();
         capBoilingTween.Append(capTransform.DOShakePosition(0.5f, capShakeStreight, 10, 90, false).SetLoops(-1).SetEase(Ease.Linear));
         capBoilingTween.Join(capTransform.DOShakeRotation(0.5f, capShakeRotate, 10, 90, false).SetLoops(-1).SetEase(Ease.Linear));
@@ -36,6 +38,7 @@ public class BoilerGameView : MonoBehaviour
     }
     public void StopCapBoiling()
     {
+        boilingSound.gameObject.SetActive(false);
         capBoilingTween?.Kill();
     }
     public async UniTask ShowBoilingGamePanel()

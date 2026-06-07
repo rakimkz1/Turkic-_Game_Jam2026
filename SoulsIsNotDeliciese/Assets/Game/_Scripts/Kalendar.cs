@@ -12,6 +12,8 @@ public class Kalendar : MonoBehaviour
     public CinemachineCamera candleCam;
     public Image blackBackgroundPanel;
     public TextMeshProUGUI nextDayText;
+    public SoundPackage candleBreath;
+    public SoundPackage reject;
     private Sequence sequence;
     private bool _isAnim;
 
@@ -29,9 +31,11 @@ public class Kalendar : MonoBehaviour
 
     private async UniTask StartAnim()
     {
+        Debug.Log("Kalendar work");
         _isAnim = true;
         candleCam.Priority = 10;
         await UniTask.Delay(2000);
+        AudioManager.instance.PlayOneShot(candleBreath);
         blackBackgroundPanel.color = Color.black;
         candleCam.Priority = -10;
         candles[DayManager.instance.currentDay].SetActive(false);
@@ -51,5 +55,6 @@ public class Kalendar : MonoBehaviour
     private void Reject()
     {
         
+        AudioManager.instance.PlayOneShot(reject);
     }
 }

@@ -9,6 +9,7 @@ public class BoilerManager : MonoBehaviour
     public bool isSoulsRequires = true;
     public Action onBoiderGameStart;
     public Action onBoilerGameEnd;
+    public SoundPackage successSound;
     public GameObject boiderGamePanel;
     public GameObject caps;
     public float capMoveSpeed;
@@ -22,6 +23,7 @@ public class BoilerManager : MonoBehaviour
     public float soulBallAccelerationPerHit;
     public float soulBallDamagePerHit;
     public float soulBallMaxHealth;
+    public float maxSpeed;
     public LayerMask capLayer;
 
     [SerializeField] private CameraMovement cameraMovement;
@@ -99,6 +101,7 @@ public class BoilerManager : MonoBehaviour
     private void Success()
     {
         isSoulsRequires = false;
+        AudioManager.instance.PlayOneShot(successSound);
         _view.StopCapBoiling();
     }
 
@@ -127,7 +130,7 @@ public class BoilerManager : MonoBehaviour
     {
         await UniTask.Delay(200);
         soulBall.gameObject.SetActive(true);
-        soulBall.Init(soulBallSpeed, soulBallAccelerationPerHit, soulBallDamagePerHit, soulBallMaxHealth); 
+        soulBall.Init(soulBallSpeed, soulBallAccelerationPerHit, soulBallDamagePerHit, soulBallMaxHealth, maxSpeed); 
         // Some Animation Here
         await UniTask.Delay(500);
         soulBall.isWorking = true;

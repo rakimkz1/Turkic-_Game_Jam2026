@@ -13,16 +13,20 @@ public class SoulBall : MonoBehaviour
 
     public float escapeLine;
     public bool isWorking;
+    public SoundPackage capHitSound;
+    public SoundPackage metalHitSound;
+    public SoundPackage afterSteamSound;
     private float currentHealth;
 
     private float maxHealth;
     private float movementSpeed;
+    private float maxMovementSpeed;
     private float startMovementSpeed;
     private float accelerationPerHit;
     private float damagePerHit;
     private Vector3 initalPos;
     private Rigidbody2D _rb;
-    public void Init(float startMovementSpeed, float accelerationPerHit, float damagePerHit, float maxHealth)
+    public void Init(float startMovementSpeed, float accelerationPerHit, float damagePerHit, float maxHealth, float maxSpeed)
     {
         this.startMovementSpeed = startMovementSpeed;
         this.accelerationPerHit = accelerationPerHit;
@@ -30,6 +34,8 @@ public class SoulBall : MonoBehaviour
         movementSpeed = startMovementSpeed;
         currentHealth = maxHealth;
         this.maxHealth = maxHealth;
+        maxMovementSpeed = maxSpeed;
+
         moveDirection = Vector3.down;
         transform.position = initalPos;
     }
@@ -62,6 +68,7 @@ public class SoulBall : MonoBehaviour
         if(BoilerManager.Instance.damageFromCap == 0) return;
         currentHealth -= BoilerManager.Instance.damageFromCap;
         DemonKvotaManager.instance.AddKvota(BoilerManager.Instance.damageFromCap);
+        AudioManager.instance.PlayOneShot(capHitSound);
         if (currentHealth <= 0)
         {
             Debug.Log("Boiled");
@@ -74,6 +81,8 @@ public class SoulBall : MonoBehaviour
     private void TakeDamage()
     {
         Debug.Log("TakeDamage");
+        AudioManager.instance.PlayOneShot(metalHitSound);
+        AudioManager.instance.PlayOneShotDelay(afterSteamSound, 0.1f);
         currentHealth -= damagePerHit;
         DemonKvotaManager.instance.AddKvota(damagePerHit);
         if (currentHealth <= 0)
@@ -94,6 +103,7 @@ public class SoulBall : MonoBehaviour
     private void Update()
     {
         _rb.linearVelocity = moveDirection * movementSpeed;
+        _rb.linearVelocity = Vector3.ClampMagnitude(_rb.linearVelocity, maxMovementSpeed);
         if (transform.localPosition.y >= escapeLine && isWorking)
         {
             if(isMinistalAllowEscape != null && !isMinistalAllowEscape.Invoke())
