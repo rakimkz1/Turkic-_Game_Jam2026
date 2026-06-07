@@ -15,6 +15,7 @@ public class BoilerGameView : MonoBehaviour
     public AudioSource boilingSound;
     public GameObject ExplodeEffect;
     public SoundPackage ExplodeSound;
+    public SoundPackage MetalSound;
 
     private Vector3 capInitialPos;
     private Quaternion capInitalRot;
@@ -57,6 +58,7 @@ public class BoilerGameView : MonoBehaviour
         await UniTask.Delay(250);
         ExplodeEffect.GetComponent<ParticleSystem>().Play();
         AudioManager.instance.PlayOneShot(ExplodeSound);
+        AudioManager.instance.PlayOneShot(MetalSound);
     }
     public void StartCapBoiling()
     {

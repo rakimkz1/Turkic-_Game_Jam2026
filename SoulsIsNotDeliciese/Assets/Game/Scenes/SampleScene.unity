@@ -2425,6 +2425,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1903450663}
     m_Modifications:
+    - target: {fileID: 994299148241765470, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118539142780029519, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1255053967005034563, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
       propertyPath: m_Name
       value: Explode
@@ -2485,6 +2493,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1255053967005034565, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4215929347678356909, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843348583011760284, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410005452324622452, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5410005452324622452, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
       propertyPath: LightsModule.light
       value: 
@@ -2507,6 +2531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8510244669804950842, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510244669804950842, guid: 2ee7574cb1211da4ba89d1838327b5c4, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3693,7 +3721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &844706786
 Transform:
   m_ObjectHideFlags: 0
@@ -6687,8 +6715,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9fd3aa97d2273a742985267329d64af4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 4ea7483867375b942a74f3b9c7ea73e3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.742
+  m_PlayOnAwake: 0
+  m_Volume: 0.655
   m_Pitch: 0.58
   Loop: 0
   Mute: 0
@@ -16161,6 +16189,9 @@ MonoBehaviour:
   ExplodeSound:
     audioClip: {fileID: 8300000, guid: c3a020370f18ccb4b90fe2fbc81aedef, type: 3}
     volume: 1
+  MetalSound:
+    audioClip: {fileID: 8300000, guid: 555288d2168a4bb46ac980a01ab03ed0, type: 3}
+    volume: 2
 --- !u!1 &1840681356
 GameObject:
   m_ObjectHideFlags: 0

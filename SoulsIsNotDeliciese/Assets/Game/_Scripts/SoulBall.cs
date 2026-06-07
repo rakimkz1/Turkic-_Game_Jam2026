@@ -31,7 +31,7 @@ public class SoulBall : MonoBehaviour
     private Rigidbody2D _rb;
     private HitStop hitStop;
     private bool isColider;
-    private float isColideDuraction;
+    private float isColideDuraction = 0.3f;
     public void Init(float startMovementSpeed, float accelerationPerHit, float damagePerHit, float maxHealth, float maxSpeed)
     {
         initalPos = transform.position;
@@ -74,6 +74,12 @@ public class SoulBall : MonoBehaviour
         if(collision.collider != null && collision.collider.tag == "Boiler" && isColider)
         {
             moveDirection = (capPosition.position - transform.position).normalized;
+        }
+        isColideDuraction -= Time.deltaTime;
+        if (isColideDuraction < 0)
+        {
+            moveDirection = (capPosition.position - transform.position).normalized;
+            isColideDuraction = 0.2f;
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -122,6 +128,7 @@ public class SoulBall : MonoBehaviour
         Vector3 incoming = moveDirection.normalized;
         Vector3 reflected = Vector3.Reflect(incoming, normal).normalized;
         float turnAngle = Vector3.Angle(incoming, reflected);
+        isColideDuraction = 0.2f;
 
         Vector3 capCenter = Vector3.zero;
         bool haveCenter = false;
