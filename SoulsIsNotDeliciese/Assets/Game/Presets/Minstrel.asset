@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: Minstrel
   m_EditorClassIdentifier: Assembly-CSharp::Minstrel
   name: Minstrel
-  IdleReplices: []
-  HoverReplices: []
-  DragReplices: []
-  PutInReplices: []
+  IdleReplices:
+  - I always thought I'd die because of a woman... and I did... but I never expected
+    my second death to be because of you.
+  - "Hey hey! Wait wait! Don\u2019t kill me! I can sing! I can dance! Just don\u2019t
+    throw me in there!"
+  - "Life is cruel... but this is just unfair, don\u2019t you think?"
+  - "I\u2019ve talked my way out of life once already... maybe I can do it again?"
+  - Death is fine, but could it at least be less hot?
+  HoverReplices:
+  - "That woman\u2026 she\u2019s the one who dragged you into this, right? Yeah\u2026
+    makes sense."
+  - "I just need one good story and I\u2019m out of this mess, right?"
+  - Whose heart did I break so badly that even heaven wants me gone?
+  DragReplices:
+  - "N-no, no, no! You can\u2019t do this to me! How is this fair?!"
+  - "Wait! Wait! Let\u2019s talk this out! I can explain everything!"
+  - "Please, I\u2019m begging you! I still have so many unfinished stories!"
+  PutInReplices:
+  - "Don\u2019t\u2014 don\u2019t do this! I was just joking! I always joke!"
   bonusDescription: 
   returnChance: 0.4

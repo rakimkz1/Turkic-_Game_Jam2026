@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: Aksacal
   m_EditorClassIdentifier: Assembly-CSharp::Aksacal
   name: Aksakal
-  IdleReplices: []
-  HoverReplices: []
-  DragReplices: []
-  PutInReplices: []
+  IdleReplices:
+  - There are moments when no shoulder is there to lean on... and even standing upright
+    feels like a lie.
+  - When I observe human deeds, I sometimes think... perhaps every misfortune is
+    deserved.
+  - Wisdom is not comfort, child. It is simply clearer pain.
+  - I have spent my life asking questions. Few of them ever answered me back.
+  - The older you get, the less you expect from people. That is not wisdom. That
+    is exhaustion.
+  HoverReplices:
+  - Why does one need a heart if it grows silent?
+  - Why strength, if you are destined to retreat?
+  - Why power, if you do not understand what you are doing with it?
+  DragReplices:
+  - You are certain of this path? Then walk it. I will not stop you... nor will I
+    save you.
+  - Every decision leaves a mark. Some are just easier to ignore than others.
+  PutInReplices:
+  - So it ends like this... Not judgment. Just continuation of the same cruel logic.
   bonusDescription: 
   wallSizeBonus: 1.2

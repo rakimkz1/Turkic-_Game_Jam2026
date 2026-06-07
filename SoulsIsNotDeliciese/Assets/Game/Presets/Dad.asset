@@ -13,10 +13,21 @@ MonoBehaviour:
   m_Name: Dad
   m_EditorClassIdentifier: Assembly-CSharp::Dad
   name: Dad
-  IdleReplices: []
-  HoverReplices: []
-  DragReplices: []
-  PutInReplices: []
+  IdleReplices:
+  - What are you doing, you shameless bastard?! Release us at once!
+  - You are a disgrace to this family! Cursed be you! Cursed be all your descendants!
+  - I should never have let that damned snake near you. Never!
+  - A family is built on respect... and you tore it apart with your own hands.
+  - I raised you to stand straight, not to kneel before monsters.
+  HoverReplices:
+  - What is there to think about?! Just refuse the Shaitan! You cannot betray your
+    ancestors like this!
+  - Look at what you've become... was this worth it?
+  DragReplices:
+  - Yes... then do me a favor. End this humiliation and kill me already.
+  PutInReplices:
+  - Finally... at the end, you have sinned, my son. A great sin. One that cannot
+    be washed away. But you are still my son. And I will carry this sin with you.
   bonusDescription: 
   speedBonus: 1.5
   tiltMaxAngleBonus: 1.3

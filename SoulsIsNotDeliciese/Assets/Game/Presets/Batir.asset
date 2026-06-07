@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: Batir
   m_EditorClassIdentifier: Assembly-CSharp::Batir
   name: Batir
-  IdleReplices: []
-  HoverReplices: []
-  DragReplices: []
-  PutInReplices: []
+  IdleReplices:
+  - "Long ago, they called me \u201Cstupid\u201D because I never struck with the
+    blade\u2019s edge... only the flat."
+  - Whatever happens, young batyr... listen to your heart!
+  - "I may not be smart, but I\u2019ve never once turned my back on a fight."
+  - "A true warrior doesn\u2019t think too much... he just stands."
+  - My victories were never pretty. But they were mine.
+  HoverReplices:
+  - In your age I fought the Dzungars, not tried to save my skin using my ancestors.
+  - "You hesitate too much. A blade doesn\u2019t hesitate."
+  DragReplices:
+  - "So you\u2019ve decided after all? Good. I may not be clever, but I won\u2019t
+    go down without a fight."
+  - Come on then! Show me what kind of warrior you are!
+  PutInReplices:
+  - "Then let\u2019s begin. I\u2019ll show you what I am still capable of!"
   bonusDescription: 
   damageFromCap: 1

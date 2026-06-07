@@ -14,10 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GrandMomSoul
   name: GrandMom
   IdleReplices:
-  - I am your Grand MOTHER
+  - Son, choose me! I can stand against the Shaitan!
+  - "Oh-ho! Why are you feeding into the Shaitan\u2019s game?! Clench your will and
+    just banish him already!"
+  - "This is nothing! Just panic everywhere... it\u2019s only the Shaitan! Deal with
+    him!"
+  - I have faced worse spirits than this. This one will bow before me.
   HoverReplices:
-  - I am your Grand MOTHER
-  DragReplices: []
-  PutInReplices: []
+  - "This Shaitan is the kind that runs with its tail between its legs! Let me loose
+    and I\u2019ll show you real power!"
+  - "Don\u2019t hesitate. A ritual like this needs confidence, not fear."
+  DragReplices:
+  - Oh? Where will the ritual take place? Fine then. I cannot lose to the Shaitan
+    anyway.
+  - "You\u2019re really choosing me? Smart choice."
+  PutInReplices:
+  - "Tch! Hey! You never said I\u2019d be cooked alive! Well\u2026 I\u2019m not exactly
+    alive but still!"
   bonusDescription: 
   tiltRecude: 0.01

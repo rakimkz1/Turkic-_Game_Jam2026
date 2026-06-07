@@ -13,10 +13,27 @@ MonoBehaviour:
   m_Name: GrandFather
   m_EditorClassIdentifier: Assembly-CSharp::GrandFather
   name: GrandFather
-  IdleReplices: []
-  HoverReplices: []
-  DragReplices: []
-  PutInReplices: []
+  IdleReplices:
+  - Son, think carefully. Look around. Is what you're doing really worth it? If it
+    is... then so be it.
+  - Hahaha... Remember when you were little? You brought some strange beetle home
+    and tried to keep it as a pet.
+  - I always wondered what kind of man you'd become. Never thought I'd get my answer
+    like this.
+  - Life teaches many lessons, son. Sadly, some lessons arrive too late.
+  - 'Your grandmother always said you were stubborn. Looks like she was right. '
+  HoverReplices:
+  - Doubt is normal. A choice made without doubt is usually a rushed one.
+  - Change your mind as many times as you want. Just don't change it for people who
+    don't care about you.
+  - Take your time. Even a wrong choice should at least be your own.
+  DragReplices:
+  - Have you thought this through? If so, the choice is yours. Take care of yourself.
+  - So you've decided... I respect that. Just don't let the Shaitan fool you.
+  - If you're going to do it, do it with open eyes. Regret is heavier than any burden.
+  PutInReplices:
+  - Well... I always knew you were the defective branch of this family. Hopefully
+    fate treats you the same someday.
   bonusDescription: 
   chanceToExecute: 0.2
   slowDownNumber: 0.75
