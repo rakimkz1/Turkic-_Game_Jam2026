@@ -1,12 +1,9 @@
 using Cysharp.Threading.Tasks;
-using DG.Tweening.Plugins.Core.PathCore;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Demon : MonoBehaviour
 {
@@ -21,6 +18,7 @@ public class Demon : MonoBehaviour
 	private Animator anim;
 	private bool isDayEnd, isFoodEnd;
 	private bool isSkipping = false;
+	private bool isSkipAll = false;
 
 	private RectTransform bgRect;
 
@@ -28,16 +26,17 @@ public class Demon : MonoBehaviour
 
 	private void Start()
 	{
+        DayManager.instance.OnNewDay += SkipAllDialogs;
 		DayManager.instance.OnNewDay += PlayDayStartReplices;
 		DemonKvotaManager.instance.OnKvotaFilled += PlayFoodEndReplices;
 
 		anim = GetComponent<Animator>();
 		bgRect = text.rectTransform.parent as RectTransform;
 	}
-
-	private void PlayDayStartReplices()
+    private async void PlayDayStartReplices()
 	{
 		if (isDayEnd) { return; }
+		await UniTask.WaitUntil(()=>IsPlayingReplices == false);
 		Debug.Log("Start Replice");
 		isDayEnd = true;
 		isFoodEnd = false;
@@ -58,7 +57,8 @@ public class Demon : MonoBehaviour
 
 	private async UniTask PlayReplices(Speach[] replices)
 	{
-		if (IsPlayingReplices) { return; }
+        isSkipAll = false;
+        if (IsPlayingReplices) { return; }
 
 		Debug.Log("Replices");
 		IsPlayingReplices = true;
@@ -97,7 +97,7 @@ public class Demon : MonoBehaviour
 
 			await UniTask.Yield();
 
-			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || isSkipping)
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || isSkipping || isSkipAll)
 			{
 				isSkipping = false;
 				return;
@@ -105,7 +105,12 @@ public class Demon : MonoBehaviour
 		}
 	}
 
-	public void Skip() => isSkipping = true;
+    private void SkipAllDialogs()
+    {
+		isSkipAll = true;
+    }
+
+    public void Skip() => isSkipping = true;
 
 
 	[Serializable]
