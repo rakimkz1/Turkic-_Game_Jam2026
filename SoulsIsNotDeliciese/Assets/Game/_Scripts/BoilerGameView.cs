@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BoilerGameView : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class BoilerGameView : MonoBehaviour
     public Vector3 capShakeRotate;
     public Transform capRemovePoint;
     public Transform soulItemThrowPoint;
-    public Image blackBackGround;
+    public SpriteRenderer blackBackGround;
     public Transform BoilGamePanel;
     public float throwPower;
     public AudioSource boilingSound;
@@ -32,12 +31,13 @@ public class BoilerGameView : MonoBehaviour
         DOTween.Complete("HideBoilingGamePanel");
         Sequence sequence = DOTween.Sequence();
         BoilGamePanel.gameObject.SetActive(true);
-        sequence.Append(blackBackGround.DOFade(0.5f, 0.5f));
+        sequence.Append(blackBackGround.DOFade(0.85f, 0.5f));
         sequence.Append(BoilGamePanel.DOScale(boilGamePanelScale, 1f).From(0f));
         await sequence.Play().SetId("ShowBoilingGamePanel").AsyncWaitForCompletion();
     }
     public async UniTask HideBoilingGamePanel()
     {
+        Debug.Log("HideViewPanel");
         DOTween.Complete("ShowBoilingGamePanel");
         Sequence sequence = DOTween.Sequence();
         sequence.Append(BoilGamePanel.DOScale(0f, 1f));
@@ -50,7 +50,6 @@ public class BoilerGameView : MonoBehaviour
     }
     public void StartCapBoiling()
     {
-        Debug.Log("StartCap");
         boilingSound.gameObject.SetActive(true);
         capBoilingTween?.Kill();
         capBoilingTween = DOTween.Sequence();
@@ -60,7 +59,6 @@ public class BoilerGameView : MonoBehaviour
     }
     public void StopCapBoiling()
     {
-        Debug.Log("StopBoiling");
         boilingSound.gameObject.SetActive(false);
         capBoilingTween?.Kill();
     }

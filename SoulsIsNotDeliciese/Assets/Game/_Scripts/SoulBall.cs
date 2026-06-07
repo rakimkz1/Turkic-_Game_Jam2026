@@ -48,7 +48,6 @@ public class SoulBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
         if (collision.collider != null && collision.collider.tag == "Cap")
         {
             OnHitCap?.Invoke();

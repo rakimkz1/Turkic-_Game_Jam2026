@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -6,9 +7,17 @@ public class CameraMovement : MonoBehaviour
     public Vector3 rotateLimits;
     public AnimationCurve movementCurve;
     public bool isMoveable = true;
+    public static CameraMovement instance;
+    public CinemachineCamera targetCamera;
 
     private Vector3 initialRotate;
     private Vector3 intialPosition;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         intialPosition = transform.position;
@@ -17,7 +26,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!isMoveable)
+        if (!isMoveable || !targetCamera.IsLive)
             return;
 
         Vector3 movePostion = intialPosition;
