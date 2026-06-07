@@ -28,6 +28,9 @@ public class SoulBall : MonoBehaviour
     private float damagePerHit;
     private Vector3 initalPos;
     private Rigidbody2D _rb;
+    private HitStop hitStop;
+    private bool isColider;
+    private float isColideDuraction;
     public void Init(float startMovementSpeed, float accelerationPerHit, float damagePerHit, float maxHealth, float maxSpeed)
     {
         this.startMovementSpeed = startMovementSpeed;
@@ -45,6 +48,7 @@ public class SoulBall : MonoBehaviour
     private void Start()
     {
         initalPos = transform.position;
+        hitStop = GetComponent<HitStop>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -69,6 +73,7 @@ public class SoulBall : MonoBehaviour
     {
         if(BoilerManager.Instance.damageFromCap == 0) return;
         currentHealth -= BoilerManager.Instance.damageFromCap;
+        hitStop.Trigger(_rb.linearVelocity * 0.8f);
         DemonKvotaManager.instance.AddKvota(BoilerManager.Instance.damageFromCap);
         AudioManager.instance.PlayOneShot(capHitSound);
         if (currentHealth <= 0)
@@ -87,6 +92,8 @@ public class SoulBall : MonoBehaviour
         AudioManager.instance.PlayOneShotDelay(afterSteamSound, 0.1f);
         currentHealth -= damagePerHit;
         DemonKvotaManager.instance.AddKvota(damagePerHit);
+        hitStop.Trigger(_rb.linearVelocity);
+        
         if (currentHealth <= 0)
         {
             Debug.Log("Boiled");
@@ -98,13 +105,10 @@ public class SoulBall : MonoBehaviour
 
     private void Ricashet(Vector3 normal)
     {
-        Debug.Log("ricashet");
-
         Vector3 incoming = moveDirection.normalized;
         Vector3 reflected = Vector3.Reflect(incoming, normal).normalized;
         float turnAngle = Vector3.Angle(incoming, reflected);
 
-        // Если нет менеджера или нет цели — используем обычный ограниченный рикошет
         Vector3 capCenter = Vector3.zero;
         bool haveCenter = false;
         if (BoilerManager.Instance != null && BoilerManager.Instance.caps != null)
@@ -115,7 +119,6 @@ public class SoulBall : MonoBehaviour
 
         if (!haveCenter)
         {
-            // прежнее поведение с ограничением по углу
             if (turnAngle <= maxReflectionTurnAngle)
             {
                 moveDirection = reflected;
@@ -133,18 +136,11 @@ public class SoulBall : MonoBehaviour
             return;
         }
 
-        // Направление на центр крышки
         Vector3 aimDir = (capCenter - transform.position).normalized;
 
-        // Смешиваем отражение и направление на центр — сила зависит от угла и параметра centerAttraction.
-        // Чем больший угол поворота, тем сильнее тянем к центру (чтобы избегать резкого обратного разворота).
-        float angleFactor = Mathf.InverseLerp(0f, 180f, turnAngle); // 0..1
+        float angleFactor = Mathf.InverseLerp(0f, 180f, turnAngle); 
         float attraction = Mathf.Clamp01(centerAttraction * angleFactor);
-
-        // Целевое направление: ближе к aimDir при attraction -> 1
         Vector3 biased = Vector3.Slerp(reflected, aimDir, attraction).normalized;
-
-        // Ограничиваем поворот от incoming к biased максимумом maxReflectionTurnAngle
         float desiredAngle = Vector3.Angle(incoming, biased);
         float limitedAngle = Mathf.Min(desiredAngle, maxReflectionTurnAngle);
 

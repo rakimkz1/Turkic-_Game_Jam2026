@@ -4575,6 +4575,7 @@ GameObject:
   - component: {fileID: 1052016526}
   - component: {fileID: 1052016525}
   - component: {fileID: 1052016524}
+  - component: {fileID: 1052016528}
   m_Layer: 8
   m_Name: SoulBall
   m_TagString: Untagged
@@ -4595,8 +4596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoulBall
   moveDirection: {x: 0, y: 0, z: 0}
-  centerAttraction: 0.1
-  maxReflectionTurnAngle: 140
+  centerAttraction: 0.2
+  maxReflectionTurnAngle: 150
   escapeLine: 0.4
   isWorking: 0
   capHitSound:
@@ -4746,6 +4747,22 @@ Transform:
   - {fileID: 934340434}
   m_Father: {fileID: 844706786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052016528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052016522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557f6fd0c266fa34986e2d470f585637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitStop
+  maxDuration: 0.1
+  intensity: 0.1
+  frozenTimeScale: 0.06
+  easeOutDuration: 0.05
 --- !u!1 &1069004407
 GameObject:
   m_ObjectHideFlags: 0
@@ -9085,17 +9102,17 @@ MonoBehaviour:
     volume: 0
   boiderGamePanel: {fileID: 844706785}
   caps: {fileID: 1589958542}
-  capMoveSpeed: 3
+  capMoveSpeed: 3.2
   capMoveLimits: 0.62
   capTiltSpeed: 1500
   capMaxTiltAngle: 180
   damageFromCap: 0
   soulBall: {fileID: 1052016523}
-  soulBallSpeed: 0.5
-  soulBallAccelerationPerHit: 0.3
+  soulBallSpeed: 0.6
+  soulBallAccelerationPerHit: 0.2
   soulBallDamagePerHit: 8
   soulBallMaxHealth: 100
-  maxSpeed: 1.9
+  maxSpeed: 1.6
   capLayer:
     serializedVersion: 2
     m_Bits: 128
