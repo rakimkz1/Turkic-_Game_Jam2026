@@ -54,7 +54,6 @@ public class Kalendar : MonoBehaviour
     }
     private void Reject()
     {
-        
         AudioManager.instance.PlayOneShot(reject);
     }
 }
