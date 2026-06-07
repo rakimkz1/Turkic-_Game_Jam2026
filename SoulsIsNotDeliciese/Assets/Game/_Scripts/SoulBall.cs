@@ -33,6 +33,7 @@ public class SoulBall : MonoBehaviour
     private float isColideDuraction;
     public void Init(float startMovementSpeed, float accelerationPerHit, float damagePerHit, float maxHealth, float maxSpeed)
     {
+        initalPos = transform.position;
         this.startMovementSpeed = startMovementSpeed;
         this.accelerationPerHit = accelerationPerHit;
         this.damagePerHit = damagePerHit;
@@ -42,31 +43,41 @@ public class SoulBall : MonoBehaviour
         maxMovementSpeed = maxSpeed;
 
         moveDirection = Vector3.down;
-        transform.position = initalPos;
     }
 
     private void Start()
     {
-        initalPos = transform.position;
         hitStop = GetComponent<HitStop>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision");
         if (collision.collider != null && collision.collider.tag == "Cap")
         {
             OnHitCap?.Invoke();
             HitCap();
             Ricashet(collision.contacts[0].normal);
+            isColider = true;
         }
         if (collision.collider != null && collision.collider.tag == "Boiler")
         {
             OnHitBoiler?.Invoke();
             TakeDamage();
             Ricashet(collision.contacts[0].normal);
+            isColider = true;
         }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.collider != null && collision.collider.tag == "Boiler" && isColider)
+        {
+            Ricashet((transform.position - collision.contacts[0].point).normalized);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        isColider = false;
     }
 
     private void HitCap()
@@ -80,6 +91,7 @@ public class SoulBall : MonoBehaviour
         {
             Debug.Log("Boiled");
             OnBoiled?.Invoke();
+            hitStop.Cancel();
             gameObject.SetActive(false);
         }
         movementSpeed += accelerationPerHit * 0.3f;
@@ -97,6 +109,7 @@ public class SoulBall : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Boiled");
+            hitStop.Cancel();
             OnBoiled?.Invoke();
             gameObject.SetActive(false);
         }
@@ -168,6 +181,7 @@ public class SoulBall : MonoBehaviour
                 return;
             }
             isWorking = false;
+            hitStop.Cancel();
             OnEscape?.Invoke();
             gameObject.SetActive(false);
         }
@@ -182,5 +196,9 @@ public class SoulBall : MonoBehaviour
     public void SlowDownBall(float slowAmount)
     {
         movementSpeed *= slowAmount;
+    }
+    private void OnDisable()
+    {
+        transform.position = initalPos;
     }
 }

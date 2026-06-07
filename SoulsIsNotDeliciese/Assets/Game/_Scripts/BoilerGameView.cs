@@ -31,7 +31,7 @@ public class BoilerGameView : MonoBehaviour
         DOTween.Complete("HideBoilingGamePanel");
         Sequence sequence = DOTween.Sequence();
         BoilGamePanel.gameObject.SetActive(true);
-        sequence.Append(blackBackGround.DOFade(0.85f, 0.5f));
+        sequence.Append(blackBackGround.DOFade(1f, 0.5f));
         sequence.Append(BoilGamePanel.DOScale(boilGamePanelScale, 1f).From(0f));
         await sequence.Play().SetId("ShowBoilingGamePanel").AsyncWaitForCompletion();
     }

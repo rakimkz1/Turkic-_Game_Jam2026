@@ -22,6 +22,7 @@ public class DemonKvotaManager : MonoBehaviour
         DayManager.instance.OnNewDay += () =>
         {
             todaysKvota = 0f;
+            kvotaBar.fillAmount = todaysKvota / maxKvota;
         };
     }
 

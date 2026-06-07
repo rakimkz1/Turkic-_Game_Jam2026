@@ -57,6 +57,7 @@ public class Demon : MonoBehaviour
 
 	private async UniTask PlayReplices(Speach[] replices)
 	{
+		text.gameObject.SetActive(true);
         isSkipAll = false;
         if (IsPlayingReplices) { return; }
 
@@ -77,7 +78,7 @@ public class Demon : MonoBehaviour
 			Debug.Log($"WaitTime = {waitTime * 10}");
 			await WaitReplic(waitTime*10);
 		}
-
+		text.gameObject.SetActive(false);
 		anim.Play(DefaultPos);
 		IsPlayingReplices = false;
 	}

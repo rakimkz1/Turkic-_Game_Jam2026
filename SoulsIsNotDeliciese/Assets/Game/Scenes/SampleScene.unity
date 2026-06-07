@@ -4735,7 +4735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1052016523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4912,10 +4912,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557f6fd0c266fa34986e2d470f585637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitStop
-  maxDuration: 0.1
-  intensity: 0.1
-  frozenTimeScale: 0.06
-  easeOutDuration: 0.05
+  maxDuration: 0.06
+  intensity: 0.08
+  frozenTimeScale: 0
+  easeOutDuration: 0.02
 --- !u!1 &1069004407
 GameObject:
   m_ObjectHideFlags: 0
@@ -9721,8 +9721,8 @@ MonoBehaviour:
   damageFromCap: 0
   soulBall: {fileID: 1052016523}
   soulBallSpeed: 0.6
-  soulBallAccelerationPerHit: 0.2
-  soulBallDamagePerHit: 8
+  soulBallAccelerationPerHit: 0.3
+  soulBallDamagePerHit: 7
   soulBallMaxHealth: 100
   maxSpeed: 1.6
   capLayer:
