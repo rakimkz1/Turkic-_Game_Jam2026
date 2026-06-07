@@ -62,7 +62,7 @@ public class TextPlayer
 		switch (currentState)
 		{
 			case State.Nothing:
-				StartPlaying(content, textingType);
+				await StartPlaying(content, textingType);
 				break;
 
 			case State.Playing:
@@ -70,12 +70,12 @@ public class TextPlayer
 
 				if (showImmediatelyAfterSkip)
 				{
-					StartPlaying(content, textingType);
+					await StartPlaying(content, textingType);
 				}
 				break;
 
 			case State.Showing:
-				StartPlaying(content, textingType);
+				await StartPlaying(content, textingType);
 				break;
 		}
 	}
@@ -179,6 +179,33 @@ public class TextPlayer
 		cts.Cancel();
 		cts.Dispose();
 		cts = null;
+	}
+
+	public static string WrapText(string text, int maxLineLength)
+	{
+		string[] words = text.Split(' ');
+		System.Text.StringBuilder result = new();
+
+		int currentLength = 0;
+
+		foreach (string word in words)
+		{
+			if (currentLength + word.Length > maxLineLength)
+			{
+				result.Append('\n');
+				currentLength = 0;
+			}
+			else if (currentLength > 0)
+			{
+				result.Append(' ');
+				currentLength++;
+			}
+
+			result.Append(word);
+			currentLength += word.Length;
+		}
+
+		return result.ToString();
 	}
 
 	public enum State

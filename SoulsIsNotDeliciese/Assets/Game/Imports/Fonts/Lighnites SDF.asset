@@ -211854,10 +211854,10 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 0, g: 1.8230947, b: 4.5412054, a: 1}
+    - _FaceColor: {r: 0.9054991, g: 8.952361, b: 20.865904, a: 1}
     - _FaceUVSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
-    - _IsoPerimeter: {r: 0.255, g: 0, b: 0, a: 0}
+    - _IsoPerimeter: {r: 0.3, g: 0, b: 0, a: 0}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor1: {r: 0, g: 0.23759937, b: 1, a: 1}
