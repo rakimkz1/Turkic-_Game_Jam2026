@@ -250,6 +250,133 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &799895198651364598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2504832970713275850}
+  - component: {fileID: 1455289256791158698}
+  - component: {fileID: 7615499014606488499}
+  m_Layer: 0
+  m_Name: Spot Light (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2504832970713275850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799895198651364598}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: 0.00756, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3038875172802404782}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &1455289256791158698
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799895198651364598}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &7615499014606488499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799895198651364598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &883950254929062756
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +443,7 @@ Transform:
   - {fileID: 5927536591044229988}
   - {fileID: 3972436843888631323}
   - {fileID: 1546942077019979131}
+  - {fileID: 3524313660598019570}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1217181905862066102
@@ -734,6 +862,7 @@ Transform:
   - {fileID: 2677687091013037020}
   - {fileID: 5482487927982218123}
   - {fileID: 5868762677575130491}
+  - {fileID: 2504832970713275850}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771998507603378978
@@ -769,6 +898,7 @@ Transform:
   - {fileID: 114927836833216691}
   - {fileID: 4989976311279757189}
   - {fileID: 419247805689549648}
+  - {fileID: 8451304765678306885}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923501206693223552
@@ -1464,6 +1594,7 @@ Transform:
   - {fileID: 3324944688628100854}
   - {fileID: 7336995737376314153}
   - {fileID: 8901888019511136850}
+  - {fileID: 8882450774272062863}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2671094437193658042
@@ -2072,6 +2203,7 @@ Transform:
   - {fileID: 237711650795592054}
   - {fileID: 3331165242493785913}
   - {fileID: 2418630837540634036}
+  - {fileID: 5204263857507874888}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3390057969902388023
@@ -2300,6 +2432,7 @@ Transform:
   - {fileID: 3090551616739662174}
   - {fileID: 4177604164863172287}
   - {fileID: 4718003933609164444}
+  - {fileID: 5767603427490760780}
   m_Father: {fileID: 6123503149030521072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3840401551637464670
@@ -2460,6 +2593,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 536562857413989468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4095500390322320160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5767603427490760780}
+  - component: {fileID: 6172554018916778763}
+  - component: {fileID: 3735838917025532012}
+  m_Layer: 0
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5767603427490760780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095500390322320160}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: 0.00756, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1441731313038364725}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &6172554018916778763
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095500390322320160}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &3735838917025532012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095500390322320160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &4253188384544812402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,15 +2903,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0.3
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0.19902304
+      outSlope: 0.19902304
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.09829061
     - serializedVersion: 3
-      time: 1
-      value: 2
+      time: 10
+      value: 1.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2663,397 +2923,244 @@ MonoBehaviour:
     m_RotationOrder: 4
   replices:
   - DayStartReplices:
-    - Replices: "\u0412\u0430\u0430!!!"
-      AnimPos: DemonAppear
+    - Replices: WAAAH!!!
+      AnimPos: 'DemonAppear  '
       animCrossFades: 0
-    - Replices: "\u0414\u043E\u0431\u0440\u043E\u0435 \u0443\u0442\u0440\u043E, \u041B\u043E\u0448\u0430\u0440\u0430!
-        \u041E\u0439, \u044F \u043E\u0448\u0438\u0431\u0441\u044F, \u044F \u0438\u043C\u0435\u043B
-        \u0432\u0432\u0438\u0434\u0443... \u041D\u043E\u0447\u044C! \u0414\u0430!"
-      AnimPos: DemonDefaultPose
+    - Replices: Good evening, Loser! Oops, my bad, I meant... night! Right!
+      AnimPos: 'DemonDefaultPose  '
       animCrossFades: 0
-    - Replices: "\u0427\u0435\u0433\u043E \u0445\u043C\u0443\u0440\u044B\u0439 \u0442\u0430\u043A\u043E\u0439,
-        \u043D\u0435 \u0443\u0437\u043D\u0430\u0435\u0448\u044C \u044D\u0442\u043E
-        \u043C\u0435\u0441\u0442\u043E? \u042D\u0442\u043E \u0436\u0435 \u0442\u0432\u043E\u0439
-        \u0434\u043E\u043C, \u0411\u0430\u043B\u0431\u0435\u0441!"
-      AnimPos: DefaultFaceSpeech1
+    - Replices: Why the long face? Don't recognize this place? It's your home, Dummy!
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u041D\u0443 \u0438 \u0434\u0435\u0440\u044C\u043C\u043E. \u0425\u0432\u0430\u0442\u0438\u0442
-        \u0441\u0447\u0438\u0442\u0430\u0442\u044C \u043E\u0432\u0435\u0446 \u043D\u0430
-        \u043D\u0435\u0431\u0435 \u0438 \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C
-        \u043C\u043D\u0435 \u0447\u0442\u043E \u043D\u0438 \u0431\u0443\u0434\u044C."
-      AnimPos: DefaultFaceSpeech1
+    - Replices: What a dump. Stop counting sheep in the sky and cook me something.
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u0418 \u0447\u0435\u0433\u043E \u0441\u0442\u043E\u0438\u0448\u044C?
-        \u0414\u0443\u043C\u0430\u0435\u0448\u044C \u043C\u043E\u0436\u0435\u0448\u044C
-        \u043C\u043D\u0435 \u043F\u0435\u0440\u0435\u0447\u0438\u0442\u044C? "
-      AnimPos: DefaultFaceSpeech3
+    - Replices: Why are you just standing there? You think you can talk back to me?
+      AnimPos: 'DefaultFaceSpeech3  '
       animCrossFades: 0
-    - Replices: "\u0425\u0430\u0445, \u044F \u0431\u044B \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u043B
-        \u043D\u0430 \u0442\u0432\u043E\u044E \u043D\u0435\u0441\u0433\u0438\u0431\u0430\u0435\u043C\u043E\u0441\u0442\u044C
-        \u043A\u043E\u0433\u0434\u0430 \u0442\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
-        \u0441\u0432\u043E\u044E \u0441\u0435\u043C\u044C\u044E."
-      AnimPos: DefaultFaceSpeech2
+    - Replices: Heh, I'd love to see that stubborn attitude of yours once you see
+        your family.
+      AnimPos: 'DefaultFaceSpeech2  '
       animCrossFades: 0
-    - Replices: "\u0414\u0430-\u0434\u0430, \u0442\u0432\u043E\u044F \u0441\u0435\u043C\u044C\u044F
-        \u0442\u0443\u0442! \u0412\u0441\u0435 \u0441\u0435\u043C\u0435\u0440\u043E,
-        \u043A\u0430\u043A \u0442\u0435 \u043A\u043E\u0437\u043B\u044F\u0442\u0430.
-        \u0410 \u044F \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u0442\u0441\u044F
-        \u0432\u043E\u043B\u043A."
-      AnimPos: 'ShowFamily '
+    - Replices: Yep, your family's here! All seven of them. Just like those little
+        goats from the tale. Which makes me the wolf.
+      AnimPos: 'ShowFamily  '
       animCrossFades: 0
-    - Replices: "\u041E, \u0443\u0436\u0435 \u0440\u0432\u0435\u0448\u044C\u0441\u044F
-        \u0438 \u043C\u0435\u0447\u0435\u0448\u044C? \u0420\u0430\u0434 \u0441\u043B\u044B\u0448\u0430\u0442\u044C,
-        \u0442\u043E\u0433\u0434\u0430 \u0442\u044B \u0437\u043D\u0430\u0435\u0448\u044C
-        \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0442\u044C, \u044F \u043F\u0440\u043E\u0433\u043E\u043B\u043E\u0434\u0430\u043B\u0441\u044F."
-      AnimPos: JoyPose2
+    - Replices: Already furious, are we? Glad to hear it. Then you know what to do.
+        I'm hungry.
+      AnimPos: 'JoyPose2  '
       animCrossFades: 0
-    - Replices: "... \u0422\u044B \u0447\u0442\u043E, \u043D\u0438\u043A\u043E\u0433\u0434\u0430
-        \u0432 \u0436\u0438\u0437\u043D\u0438 \u043D\u0435 \u0433\u043E\u0442\u043E\u0432\u0438\u043B?"
-      AnimPos: DefaultFaceSpeech1
+    - Replices: ...Wait, have you seriously never cooked before?
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u0412\u043E\u0442 \u0436\u0435 \u0436 \u0431\u0435\u0441\u0442\u043E\u043B\u043E\u0447\u044C,
-        \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F \u0442\u0435\u0431\u044F
-        \u0432\u0441\u0435\u043C\u0443 \u043E\u0431\u0443\u0447\u0430\u0442\u044C."
-      AnimPos: DefaultFaceSpeech1
+    - Replices: You're hopeless. Looks like I'll have to teach you everything.
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u0418 \u0442\u0430\u043A, \u0441\u043B\u0443\u0448\u0430\u0439
-        \u0441\u044E\u0434\u0430, \u041B\u043E\u0448\u0430\u0440\u0430, \u0441\u043F\u0440\u0430\u0432\u0430
-        \u043E\u0442 \u0442\u0435\u0431\u044F \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F
-        \u043F\u043E\u043B\u043A\u0430, \u0433\u0434\u0435 \u043F\u043E\u043A\u043E\u044F\u0442\u0441\u044F
-        \u0442\u0432\u043E\u0438 \u043F\u0440\u0435\u0434\u043A\u0438."
-      AnimPos: ShowSpirits
+    - Replices: Listen up, Loser. On the shelf to your right rest the souls of your
+        ancestors.
+      AnimPos: 'ShowSpirits  '
       animCrossFades: 0
-    - Replices: "\u041A\u0430\u0436\u0434\u044B\u0439 \u0438\u0437 \u043D\u0438\u0445
-        \u0434\u0430\u0435\u0442 \u0442\u0435\u0431\u0435 \u0441\u0438\u043B\u0443,
-        \u0443\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u0443\u044E. \u0412\u044B\u0431\u0435\u0440\u0438
-        \u0442\u0443 \u043A\u043E\u0442\u043E\u0440\u0443\u044E \u043D\u0435 \u0436\u0430\u043B\u043A\u043E
-        \u0438 \u0437\u0430\u043A\u0438\u0434\u044B\u0432\u0430\u0439 \u0432 \u043A\u043E\u0442\u0435\u043B."
-      AnimPos: 'ShowBoiler '
+    - Replices: Each one grants you a unique power. Pick whichever one you're willing
+        to lose and toss it into the cauldron.
+      AnimPos: 'ShowBoiler  '
       animCrossFades: 0
-    - Replices: "\u0418 \u043F\u043E\u0431\u044B\u0441\u0442\u0440\u0435\u0435! \u042F
-        \u0433\u043E\u043B\u043E\u0434\u0435\u043D \u0438 \u0433\u043E\u0442\u043E\u0432
-        \u0441\u044A\u0435\u0441\u0442\u044C \u0441\u0435\u043C\u0435\u0440\u044B\u0445
-        \u0442\u0432\u043E\u0438\u0445 \u0441\u0435\u043C\u044C\u0438, \u0435\u0441\u043B\u0438
-        \u0442\u044B \u043D\u0435 \u043F\u043E\u0442\u043E\u0440\u043E\u043F\u0438\u0448\u044C\u0441\u044F!"
-      AnimPos: SmilePose2
+    - Replices: And hurry up! I'm hungry enough to eat all seven members of your
+        family if you keep dragging your feet!
+      AnimPos: 'SmilePose2  '
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#JoyPose1\r\n\u0423\u0443\u0443\u0445\u0445, \u0432\u044B\u0448\u043B\u043E
-        \u043E\u0447\u0435\u043D\u044C \u0434\u0430\u0436\u0435 \u0430\u043F\u043F\u0435\u0442\u0438\u0442\u043D\u043E!
-        \u0418\u0437 \u0442\u0435\u0431\u044F \u0445\u043E\u0440\u043E\u0448\u0438\u0439
-        \u043F\u043E\u0432\u0430\u0440, \u0410?!"
+    - Replices: "Default Replices#JoyPose1  \r\nOoooh, that actually looks delicious!
+        You're quite the cook, huh?!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose1\r\n\u0418 \u0447\u0435\u0433\u043E \u0442\u044B
-        \u0442\u0430\u043A \u0440\u0430\u0441\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F?
-        \u0427\u0435, \u043F\u0440\u0435\u0434\u043A\u043E\u0432 \u0436\u0430\u043B\u043A\u043E
-        \u0441\u0442\u0430\u043B\u043E? "
+    - Replices: "Default Replices#JoyPose1  \r\nWhy so upset? What, suddenly feeling
+        bad for your ancestors?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2 \r\n\u0414\u0430 \u0437\u0430\u0431\u0435\u0439
-        \u0442\u044B \u043D\u0430 \u043D\u0438\u0445. \u041E\u043D\u0438 \u0441\u0432\u043E\u0435
-        \u0443\u0436\u0435 \u043F\u0440\u043E\u0436\u0438\u043B\u0438, \u0438 \u043F\u0443\u0441\u043A\u0430\u0439
-        \u0443\u0436\u0435 \u043E\u043A\u043E\u043D\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E
-        \u0441\u0433\u0438\u043D\u0443\u0442! \u0410 \u0442\u0435\u0431\u0435 \u043D\u0430\u0434\u043E
-        \u0441\u0432\u043E\u044E \u0448\u043A\u0443\u0440\u0443 \u0441\u043F\u0430\u0441\u0430\u0442\u044C!"
+    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nForget about them. They've
+        already lived their lives. Let them disappear for good! You've got your own
+        skin to save!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u041D\u0443... \u0421\u0432\u043E\u044E
-        \u0441\u0435\u043C\u044C\u044E, \u0434\u0430."
+    - Replices: "Default Replices#SmilePose1  \r\nWell... your family's skin too,
+        technically."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#ShowCandle\r\n\u041B\u0430\u0434\u043D\u043E, \u043F\u0440\u043E\u0435\u0445\u0430\u043B\u0438.
-        \u0412\u0438\u0434\u0438\u0448\u044C \u0442\u0443 \u0441\u0432\u0435\u0447\u043A\u0443?
-        \u0421\u0434\u0443\u0439 \u043A\u0430 \u043E\u0434\u043D\u0443 \u0438\u0437
-        \u0435\u0433\u043E \u043F\u043B\u0430\u043C\u0435\u043D\u0435\u0439."
+    - Replices: "Default Replices#ShowCandle  \r\nAnyway, enough of that. See that
+        candle? Blow out one of its flames."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E
-        \u0441\u0442\u0430\u043B\u043E \u0447\u0442\u043E \u0437\u0430 \u0441\u0432\u0435\u0447\u0430? "
+    - Replices: "Default Replices#SmilePose1  \r\nWondering what the candle's for?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose1\r\n\u041D\u0443, \u0442\u0430\u043A\u043E\u043C\u0443
-        \u0442\u0443\u043F\u043E\u043C\u0443 \u043A\u0430\u043A \u0442\u044B, \u0441\u043B\u043E\u0436\u043D\u043E
-        \u0431\u0443\u0434\u0435\u0442 \u0434\u043E\u0442\u044F\u043D\u0443\u0442\u044C\u0441\u044F
-        \u0434\u043E \u043C\u043E\u0438\u0445 \u0433\u0435\u043D\u0438\u0430\u043B\u044C\u043D\u044B\u0445
-        \u043C\u044B\u0441\u043B\u0435\u0439, \u043D\u043E \u044D\u0442\u043E \u043C\u043E\u044F
-        \u043B\u0438\u0447\u043D\u0430\u044F \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430. "
+    - Replices: "Default Replices#JoyPose1  \r\nSomeone as dense as you could never
+        grasp my genius, but this is one of my personal inventions."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2\r\n\u041A\u0430\u0436\u0434\u044B\u0439
-        \u0434\u0435\u043D\u044C \u043D\u0430\u0434\u043E \u0441\u0434\u0443\u0432\u0430\u0442\u044C
-        \u043F\u043E \u043E\u0434\u043D\u043E\u0439 \u0438 \u043A\u043E\u0433\u0434\u0430
-        \u0432\u0441\u0435 \u043F\u043B\u0430\u043C\u0435\u043D\u0438 \u0443\u0433\u0430\u0441\u043D\u0443\u0442,
-        \u044D\u0442\u043E \u0431\u0443\u0434\u0435\u0442 \u043E\u0437\u043D\u0430\u0447\u0430\u0442\u044C
-        \u043A\u043E\u043D\u0435\u0446 \u043D\u043E\u0432\u043E\u043B\u0443\u043D\u0438\u044E.
-        \u0410 \u0437\u043D\u0430\u0447\u0438\u0442 \u0438 \u043A\u043E\u043D\u0435\u0446
-        \u043C\u043E\u0435\u0439 \u0441\u0432\u043E\u0431\u043E\u0434\u0435..."
+    - Replices: "Default Replices#JoyPose2  \r\nYou blow out one flame every day.
+        Once they're all gone, the new moon will end. And so will my freedom..."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3\r\n... \u0410\u0436 \u043D\u0430
-        \u0441\u043B\u0435\u0437\u0443 \u043F\u0440\u043E\u0431\u0438\u043B\u043E...
-        \u041E\u0442\u0441\u0442\u0430\u0432\u0438\u0442\u044C!"
+    - Replices: "Default Replices#DefaultFaceSpeech3  \r\n...Almost made myself cry
+        there. Forget I said that!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#ShowCandle\r\n\u041F\u043E\u0442\u0443\u0448\u0438
-        \u0442\u044B \u044D\u0442\u0443 \u0433\u0440\u0435\u0431\u0430\u043D\u043D\u0443\u044E
-        \u0441\u0432\u0435\u0447\u043A\u0443 \u0438 \u043F\u043E\u0439\u0434\u0435\u043C
-        \u0443\u0436\u0435 \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439
-        \u0434\u0435\u043D\u044C!"
+    - Replices: "Default Replices#ShowCandle  \r\nNow put out the damn flame so we
+        can move on to the next day!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   - DayStartReplices:
-    - Replices: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438, \u041B\u043E\u0448\u043E\u043A!"
-      AnimPos: 'DefaultFaceSpeech2 '
+    - Replices: Good night, Dummy!
+      AnimPos: 'DefaultFaceSpeech2  '
       animCrossFades: 0
-    - Replices: "\u041A\u0430\u043A \u0434\u0435\u043B\u0430? \u041A\u0430\u043A
-        \u043E\u0449\u0443\u0449\u0435\u043D\u0438\u044F? \u041E\u0442\u043B\u0438\u0447\u043D\u043E
-        \u0441\u0435\u0431\u044F \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0448\u044C
-        \u043F\u043E\u0441\u043B\u0435 \u0432\u0447\u0435\u0440\u0430\u0448\u043D\u0435\u0433\u043E?
-        \u0410 \u0442\u043E!"
-      AnimPos: DefaultFaceSpeech3
+    - Replices: How are you feeling? Doing great after yesterday, I bet.
+      AnimPos: 'DefaultFaceSpeech3  '
       animCrossFades: 0
-    - Replices: "\u0422\u0430\u043A, \u0441\u043B\u0443\u0448\u0430\u0439 \u0441\u044E\u0434\u0430,
-        \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0443 \u043C\u0435\u043D\u044F
-        \u0442\u0440\u0443\u0434\u043D\u044B\u0439 \u0434\u0435\u043D\u0435\u043A
-        \u0432\u044B\u0434\u0430\u043B\u0441\u044F \u0438 \u044F \u043A\u0443\u0448\u0430\u0442\u044C
-        \u0445\u043E\u0447\u0443. \u041F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C
-        \u043A\u0430 \u043C\u043D\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0438\u0437
-        \u0441\u0432\u043E\u0438\u0445 \u0434\u0435\u043B\u0438\u043A\u0430\u0442\u0435\u0441\u043E\u0432!"
+    - Replices: Listen up. Today's been rough, and I'm starving. Cook me one of your
+        specialties.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "\u0418 \u0447\u0442\u043E\u0431\u044B \u0431\u0435\u0437 \u044D\u0442\u043E\u0433\u043E
-        \u0442\u0432\u043E\u0435\u0433\u043E \u0443\u043F\u0440\u044F\u043C\u0441\u0442\u0432\u0430!
-        \u041F\u043E\u043D\u044F\u043B, \u041B\u043E\u0448\u0430\u0440\u0430?!"
-      AnimPos: DefaultFaceSpeech1
+    - Replices: And none of that stubborn nonsense! Got it, Loser?!
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#SmilePose2\r\n\u041E\u043E\u043E \u043A\u0430\u043A\u0430\u044F
-        \u0432\u043A\u0443\u0441\u043D\u043E\u0442\u0435\u043D\u044C! \u042D\u0442\u043E
-        \u0431\u0435\u0437 \u043F\u0440\u0435\u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0439
-        \u0434\u043E\u0441\u0442\u043E\u0439\u043D\u043E \u043F\u044F\u0442\u0438
-        \u0437\u0432\u0435\u0437\u0434 \u041C\u0438\u0448\u043B\u0435\u043D\u0430!"
+    - Replices: "Default Replices#SmilePose2  \r\nOoooh, now that's delicious! No
+        exaggeration, this deserves five Michelin stars!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2\r\n\u0418\u0437 \u0442\u0435\u0431\u044F
-        \u043F\u043E\u0442\u043E\u043C\u043E\u043A \u0442\u0430\u043A\u043E\u0439
-        \u0441\u0435\u0431\u0435, \u043D\u0435 \u0434\u0443\u043C\u0430\u043B \u0441\u0442\u0430\u0442\u044C
-        \u043F\u043E\u0432\u043E\u0440\u043E\u043C \u0443 \u043C\u0435\u043D\u044F?
-        \u0410\u0445\u0430\u0445\u0430\u0445\u0430\u0430\u0445"
+    - Replices: "Default Replices#JoyPose2  \r\nYou're a terrible descendant, but
+        have you considered becoming my chef? Hahahaha!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u0425\u043E\u0442\u044F \u043D\u0435\u0442,
-        \u0432\u0435\u0434\u044C \u0442\u0430\u043A \u0442\u044B \u0438 \u043C\u0435\u043D\u044F
-        \u0432 \u043A\u043E\u0442\u0435\u043B \u0437\u0430\u043F\u0438\u0445\u0430\u0435\u0448\u044C,
-        \u0432\u0435\u0434\u044C \u0443 \u0442\u0435\u0431\u044F \u043A \u044D\u0442\u043E\u043C\u0443
-        \u043A\u0430\u043A\u0430\u044F \u0442\u0430 \u043B\u0438\u0447\u043D\u0430\u044F
-        \u0442\u044F\u0433\u0430! \u0420\u0430\u0437\u0432\u0435 \u043D\u0435\u0442?!"
+    - Replices: "Default Replices#SmilePose1  \r\nActually, never mind. You'd probably
+        throw me into the cauldron too. You seem to have a thing for that, don't
+        you?!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices\u041D\u0443 \u0438 \u043B\u0430\u0434\u043D\u043E,
-        \u043D\u0435 \u0441\u043C\u0435\u0448\u043D\u043E \u0443\u0436\u0435 \u0441\u0442\u0430\u043B\u043E.
-        \u041A\u0430\u043A\u043E\u0439 \u0436\u0435 \u0442\u044B \u0436\u0430\u043B\u043A\u0438\u0439!
-        \u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438 \u0443\u0436\u0435 \u0434\u0435\u043D\u044C."
+    - Replices: Default ReplicesWhatever. That joke wasn't funny anyway. You're pathetic.
+        Just skip the day already.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   - DayStartReplices:
-    - Replices: "\u041D\u043E\u0447\u044C, \u041B\u043E\u0448\u043E\u043A! \u041A\u0430\u043A\u0430\u044F
-        \u0436\u0435 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u0430\u044F
-        \u043D\u043E\u0447\u044C. "
-      AnimPos: SmilePose2
+    - Replices: Evening, Dummy! What a beautiful night.
+      AnimPos: 'SmilePose2  '
       animCrossFades: 0
-    - Replices: "\u0421\u043C\u043E\u0442\u0440\u044E \u0442\u044B \u0443\u0436\u0435
-        \u043F\u0440\u0438\u0432\u044B\u043A \u043A\u043E \u0432\u0441\u0435\u043C\u0443
-        \u044D\u0442\u043E\u043C\u0443... \u0421\u0436\u0438\u0433\u0430\u043D\u0438\u044E
-        \u0441\u0432\u043E\u0438\u0445 \u0440\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0445
-        \u0442\u0435\u0431\u0435 \u0434\u0443\u0448!"
-      AnimPos: DefaultFaceSpeech3
+    - Replices: Looks like you've gotten used to all this... Burning the souls of
+        your own family!
+      AnimPos: 'DefaultFaceSpeech3  '
       animCrossFades: 0
-    - Replices: "\u042F \u0442\u0443\u0442 \u0441\u043B\u044B\u0448\u0430\u043B \u0447\u0442\u043E
-        \u0442\u0432\u043E\u0439 \u0436\u0435\u0437\u0434\u0435, \u041A\u043E\u0442\u0438\u0431\u0430\u0440
-        \u0411\u0430\u0442\u044B\u0440 \u043D\u0438\u043A\u043E\u0433\u0434\u0430
-        \u0438 \u043D\u0435 \u0431\u044B\u043B \u0411\u0430\u0442\u044B\u0440\u043E\u043C."
-      AnimPos: DefaultFaceSpeech1
+    - Replices: I heard your jezde, Kotibar Batyr, was never really a Batyr.
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u0427\u0435\u0433\u043E, \u0434\u0443\u043C\u0430\u0435\u0448\u044C
-        \u044F \u044D\u0442\u043E \u0441\u0430\u043C \u043F\u0440\u0438\u0434\u0443\u043C\u0430\u043B?
-        \u041F\u0444\u0444\u0444, \u0437\u0430\u0447\u0435\u043C \u043C\u043D\u0435
-        \u0447\u0442\u043E \u0442\u043E \u0433\u0430\u0434\u043A\u043E\u0435 \u043F\u0440\u0438\u0434\u0443\u043C\u044B\u0432\u0430\u0442\u044C
-        \u043E \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0435, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
-        \u0443\u043C\u0435\u0440, \u0438 \u043A\u043E\u0442\u043E\u0440\u044B\u0439
-        \u0443\u043C\u0440\u0435\u0442 \u0432\u043E \u0432\u0442\u043E\u0440\u043E\u0439
-        \u0440\u0430\u0437?"
-      AnimPos: SmilePose1
+    - Replices: What, you think I made that up? Pfff. Why would I invent nasty rumors
+        about a man who's dead... and about to die a second time?
+      AnimPos: 'SmilePose1  '
       animCrossFades: 0
-    - Replices: "\u0414\u0430. \u041F\u0440\u0430\u0432\u0434\u0430 \u0432 \u0442\u043E\u043C,
-        \u0447\u0442\u043E \u041A\u043E\u0442\u0438\u0431\u0430\u0440 \u0411\u0430\u0442\u044B\u0440
-        \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u0440\u0438\u0442\u0432\u043E\u0440\u044F\u043B\u0441\u044F
-        \u0411\u0430\u0442\u044B\u0440\u043E\u043C."
-      AnimPos: SmilePose1
+    - Replices: Yep. Truth is, Kotibar Batyr only pretended to be a Batyr.
+      AnimPos: 'SmilePose1  '
       animCrossFades: 0
-    - Replices: "\u041D\u043E \u043A\u0442\u043E \u043D\u0435 \u043C\u043E\u0436\u0435\u0442
-        \u043F\u0440\u0438\u0442\u0432\u043E\u0440\u044F\u0442\u044C\u0441\u044F,
-        \u0442\u0430\u043A \u044D\u0442\u043E \u0442\u044B. \u0418\u0434\u0438 \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C
-        \u043C\u043D\u0435 \u043E\u0434\u043D\u0443 \u0434\u0443\u0448\u0443, \u0438
-        \u043D\u0435 \u043F\u0440\u0438\u0442\u0432\u043E\u0440\u044F\u0439\u0441\u044F
-        \u0445\u043E\u0440\u043E\u0448\u0438\u043C."
-      AnimPos: 'DefaultFaceSpeech2 '
+    - Replices: But you know who can't pretend? You. Now go cook me a soul, and stop
+        pretending to be a good person.
+      AnimPos: 'DefaultFaceSpeech2  '
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#SmilePose2\r\n\u041F\u0425\u0423\u0423\u0410\u0430\u0430\u0430!
-        \u041D\u0443 \u0438 \u0434\u0435\u0440\u044C\u043C\u0438\u0449\u0435! "
+    - Replices: "Default Replices#SmilePose2  \r\nPHUUUAAAH! What the hell is this
+        garbage?!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u0414\u0443\u043C\u0430\u044E \u0434\u0430\u0436\u0435
-        \u0442\u0432\u043E\u044F \u0431\u0430\u0431\u043A\u0430 \u0442\u0430\u043A
-        \u043E\u0442\u0432\u0440\u0430\u0442\u0438\u0442\u0435\u043B\u044C\u043D\u043E
-        \u043D\u0435 \u0433\u043E\u0442\u043E\u0432\u0438\u043B\u0430, \u0430 \u043E\u043D\u0430
-        \u0433\u043E\u0442\u043E\u0432\u0438\u043B\u0430 \u043C\u043D\u043E\u0433\u043E
-        \u043C\u0435\u0440\u0437\u043A\u043E\u0433\u043E!"
+    - Replices: "Default Replices#SmilePose1  \r\nI don't think even your grandmother
+        cooked this badly, and she made plenty of disgusting things!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech1\r\n\u0423\u0431\u0435\u0440\u0438
-        \u0441\u0432\u043E\u0439 \u043F\u0440\u0435\u0437\u0440\u0435\u043D\u043D\u044B\u0439
-        \u0432\u0437\u0433\u043B\u044F\u0434! \u0422\u044B \u0447\u0435, \u0445\u043E\u0447\u0435\u0448\u044C
-        \u0441\u043A\u0430\u0437\u0430\u0442\u044C \u0447\u0442\u043E \u044F \u043E\u0431\u043C\u0430\u043D\u044B\u0432\u0430\u044E?"
+    - Replices: "Default Replices#DefaultFaceSpeech1  \r\nQuit staring at me like
+        that! What, you think I'm lying?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u0414\u0430 \u044F \u0437\u0443\u0431
-        \u0441\u0442\u0430\u0432\u043B\u044E, \u0447\u0442\u043E \u043E\u043D\u0430
-        \u043F\u044B\u0442\u0430\u043B\u0430\u0441\u044C \u043E\u0442\u0440\u0430\u0432\u0438\u0442\u044C
-        \u0442\u0432\u043E\u044E \u0434\u0435\u0434\u0443\u0448\u043A\u0443. \u0425\u043E\u0442\u044F
-        \u043F\u043E \u0438\u0442\u043E\u0433\u0443 \u044D\u0442\u043E\u0442 \u044F\u0434
-        \u0432\u044B\u043F\u0438\u043B \u0442\u044B!"
+    - Replices: "Default Replices#SmilePose1  \r\nI'd bet a tooth she tried poisoning
+        your grandfather. The funny part is, you ended up drinking the poison instead!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2\r\n\u0410, \u0438\u043B\u0438 \u0442\u044B
-        \u0434\u0443\u043C\u0430\u0435\u0448\u044C \u0447\u0442\u043E \u044F \u0432\u0440\u0443
-        \u0447\u0442\u043E \u0442\u044B \u043F\u043B\u043E\u0445\u043E \u0433\u043E\u0442\u043E\u0432\u0438\u0448\u044C?"
+    - Replices: "Default Replices#JoyPose2  \r\nOr do you think I'm lying about your
+        cooking being awful?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices\u0412 \u043B\u044E\u0431\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u044F,
-        \u0442\u044B \u043C\u043D\u0435 \u0437\u0443\u0431\u044B \u043D\u0435 \u0437\u0430\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u0439,
-        \u043F\u043E\u0442\u0443\u0448\u0438 \u043F\u043B\u0430\u043C\u044F, \u043F\u0440\u043E\u0435\u0445\u0430\u043B\u0438
-        \u043D\u0430 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0434\u0435\u043D\u044C."
+    - Replices: Default ReplicesEither way, stop changing the subject. Blow out the
+        flame and let's move on to the final day.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   - DayStartReplices:
-    - Replices: "\u041D\u0443 \u0437\u0434\u0430\u0440\u043E\u0432\u0430, \u041B\u043E\u0448\u043E\u043A!"
-      AnimPos: SmilePose1
+    - Replices: Well, look who's here, Dummy.
+      AnimPos: 'SmilePose1  '
       animCrossFades: 0
-    - Replices: "\u042D\u0442\u043E \u043D\u0430\u0448 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439
-        \u0434\u0435\u043D\u044C, \u0442\u0430\u043A \u0447\u0442\u043E \u0431\u0443\u0434\u0435\u0442
-        \u043F\u0440\u0435\u0434\u0435\u043B\u044C\u043D\u043E \u043A\u0440\u0430\u0442\u043E\u043A."
-      AnimPos: 'DefaultFaceSpeech2 '
+    - Replices: This is our last day, so I'll keep it brief.
+      AnimPos: 'DefaultFaceSpeech2  '
       animCrossFades: 0
-    - Replices: "\u041D\u043E\u0432\u043E\u043B\u0443\u043D\u0438\u0435 \u0437\u0430\u0432\u0442\u0440\u0430
-        \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u0441\u044F \u0438 \u043C\u043E\u0438
-        \u0441\u0438\u043B\u044B \u0438\u0441\u0447\u0435\u0437\u043D\u0443\u0442. "
+    - Replices: The new moon ends tomorrow, and my powers will disappear.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "\u042D\u0442\u043E \u044F \u0433\u043E\u0432\u043E\u0440\u044E \u043D\u0435
-        \u043F\u043E\u0442\u043E\u043C\u0443 \u0447\u0442\u043E \u0437\u0430\u0431\u043E\u0447\u0443\u0441\u044C
-        \u043E \u0442\u0435\u0431\u0435, \u043D\u0443... \u041A\u0430\u043A \u0431\u044B
-        \u0434\u0430... \u0417\u0430\u0431\u043E\u0447\u0443\u0441\u044C..."
-      AnimPos: DefaultFaceSpeech1
+    - Replices: And I'm not saying this because I care about you. Well... I mean...
+        maybe I do...
+      AnimPos: 'DefaultFaceSpeech1  '
       animCrossFades: 0
-    - Replices: "\u0412 \u043E\u0431\u0449\u0435\u043C. \u0421\u0442\u0430\u043D\u044C
-        \u043E\u0434\u043D\u0438\u043C \u0438\u0437 \u043D\u0430\u0441. "
-      AnimPos: SmilePose2
+    - Replices: Anyway. Become one of us.
+      AnimPos: 'SmilePose2  '
       animCrossFades: 0
-    - Replices: "\u0422\u044B \u0438 \u0442\u0430\u043A \u0443\u0436\u0435 \u0441\u0430\u043C\u044B\u0439
-        \u043A\u043E\u043D\u0447\u0435\u043D\u043D\u044B\u0439 \u0447\u0435\u043B\u043E\u0432\u0435\u043A
-        \u043D\u0430 \u0441\u0432\u0435\u0442\u0435 \u043A\u043E\u0442\u043E\u0440\u044B\u0439
-        \u0441\u0436\u0435\u0433 \u0441\u0432\u043E\u0438\u0445 \u043F\u0440\u0435\u0434\u043A\u043E\u0432
-        \u0440\u0430\u0434\u0438 \u043C\u0435\u043D\u044F, \u0428\u0430\u0439\u0442\u0430\u043D\u0430."
-      AnimPos: SmilePose1
+    - Replices: You're already the most messed-up person alive. You burned your own
+        ancestors for me, a Shaitan.
+      AnimPos: 'SmilePose1  '
       animCrossFades: 0
-    - Replices: "\u0422\u0430\u043A \u0447\u0442\u043E \u043F\u043E \u0441\u0443\u0442\u0438
-        \u0442\u044B \u043D\u0435 \u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0448\u044C\u0441\u044F
-        \u0445\u0443\u0436\u0435. "
-      AnimPos: 'DefaultFaceSpeech2 '
+    - Replices: So technically, you're not getting any worse.
+      AnimPos: 'DefaultFaceSpeech2  '
       animCrossFades: 0
-    - Replices: "\u041D\u0443 \u0447\u0435? \u0422\u044B \u0442\u043E\u043B\u044C\u043A\u043E
-        \u043D\u0435 \u0441\u043F\u0435\u0448\u0438 \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C\u0441\u044F,
-        \u044F \u043C\u043E\u0433\u0443 \u043F\u043E\u0434\u043E\u0436\u0434\u0430\u0442\u044C
-        \u043F\u0430\u0440\u0443 \u0447\u0430\u0441\u0438\u043A\u043E\u0432"
-      AnimPos: DefaultFaceSpeech3
+    - Replices: Well? Don't rush to say no. I can wait a couple more hours.
+      AnimPos: 'DefaultFaceSpeech3  '
       animCrossFades: 0
-    - Replices: "\u041F\u043E\u043A\u0430 \u0434\u0443\u043C\u0430\u0435\u0448\u044C,
-        \u043F\u0440\u0438\u0433\u043E\u0442\u043E\u0432\u044C \u0447\u0442\u043E
-        \u043D\u0438 \u0431\u0443\u0434\u044C."
+    - Replices: While you're thinking, cook me something.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#JoyPose1\r\n\u041D\u0443 \u0447\u0442\u043E \u043F\u043E\u0434\u0443\u043C\u0430\u043B?"
+    - Replices: "Default Replices#JoyPose1  \r\nSo? Have you decided?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: 'Default Replices#SmilePose1
-
-        ...'
+    - Replices: "Default Replices#SmilePose1  \r\n..."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u0427\u0435 \u043C\u043E\u043B\u0447\u0438\u0448\u044C?
-        \u041D\u0435\u0443\u0436\u0442\u043E \u0435\u0449\u0435 \u0434\u0443\u043C\u0430\u0435\u0448\u044C?"
+    - Replices: "Default Replices#SmilePose1  \r\nWhy are you quiet? Still thinking?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3\r\n\u041C\u0430\u043B\u043E\u0439,
-        \u0443 \u043C\u0435\u043D\u044F \u043D\u0435 \u0442\u0430\u043A \u0443\u0436
-        \u0438 \u043C\u043D\u043E\u0433\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438.
-        \u0422\u0430\u043A \u0447\u0442\u043E \u0434\u0430\u0432\u0430\u0439 \u0431\u044B\u0441\u0442\u0440\u0435\u0435."
+    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nKid, I don't have much
+        time left. So hurry it up."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2 \r\n\u0422\u044B \u043A\u043E\u043D\u0435\u0447\u043D\u043E
-        \u0438 \u0441\u0436\u0435\u0433 \u0441\u0432\u043E\u0438\u0445 \u043F\u0440\u0435\u0434\u043A\u043E\u0432,
-        \u043D\u043E \u0438 \u043E\u043D\u0438, \u0441\u043A\u0430\u0436\u0435\u043C
-        \u0447\u0435\u0441\u0442\u043D\u043E, \u043D\u0435 \u0431\u044B\u043B\u0438
-        \u0430\u043D\u0433\u0435\u043B\u0430\u043C\u0438."
+    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nYou did burn your ancestors,
+        sure. But let's be honest, they weren't exactly angels either."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2\r\n\u041E\u0434\u0438\u043D \u0432\u043E\u0442
-        \u0431\u0430\u0431\u043D\u0438\u043A, \u0434\u0440\u0443\u0433\u043E\u0439
-        \u043B\u0436\u0435\u0446, \u0438 \u0435\u0449\u0435 \u043E\u0434\u0438\u043D,
-        \u0441\u0430\u043C\u043E\u0437\u0432\u0430\u043D\u0435\u0446. \u0427\u0435,
-        \u0434\u0443\u043C\u0430\u0435\u0448\u044C \u043E\u0434\u0438\u043D \u0442\u044B
-        \u0438\u043C\u0435\u0435\u0448\u044C \u0433\u0440\u0435\u0445 \u043D\u0430
-        \u043F\u043B\u0435\u0447\u0443?"
+    - Replices: "Default Replices#JoyPose2  \r\nOne was a womanizer, another a liar,
+        and another a fraud. What, you think you're the only one carrying sins?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech1\r\n\u041D\u043E \u043D\u0435
-        \u0432\u0441\u0435 \u043E\u043D\u0438 \u043C\u043E\u0433\u0443\u0442 \u0441\u0442\u0430\u0442\u044C
-        \u0428\u0430\u0439\u0442\u0430\u043D\u0430\u043C, \u0438\u0431\u043E \u0432\u0441\u0435
-        \u043E\u043D\u0438 \u043F\u043E\u0433\u043E\u043B\u043E\u0432\u043D\u043E
-        \u043B\u0438\u0446\u0435\u043C\u0435\u0440\u044B \u0438 \u043D\u0435 \u043C\u043E\u0433\u0443\u0442
-        \u043F\u0440\u0438\u0437\u043D\u0430\u0442\u044C\u0441\u044F \u0432 \u0441\u0432\u043E\u0438\u0445
-        \u0433\u0440\u0435\u0445\u0430\u0445."
+    - Replices: "Default Replices#DefaultFaceSpeech1  \r\nBut none of them can become
+        a Shaitan. They're all hypocrites who can't admit their own faults."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2 \r\n\u041D\u043E \u0430 \u0442\u044B
-        \u043C\u043E\u0436\u0435\u0448\u044C, \u043F\u043E\u0442\u043E\u043C\u0443
-        \u0438 \u043F\u0440\u0435\u0434\u043B\u0430\u0433\u0430\u044E \u0442\u0435\u0431\u0435
-        \u0441\u0442\u0430\u0442\u044C \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u043C
-        \u043C\u043D\u0435."
+    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nYou can. That's why I'm
+        offering you a place beside me."
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1\r\n\u041D\u0443 \u0447\u0435? "
+    - Replices: "Default Replices#SmilePose1  \r\nWell?"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose2\r\n\u0410\u0410\u0410\u0413\u0425!!!
-        \u0440\u0430\u0437 \u043D\u0435 \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0448\u044C\u0441\u044F
-        \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C, \u044F \u043F\u0440\u0438\u0434\u0443
-        \u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 \u043D\u043E\u0432\u043E\u043B\u0443\u043D\u0438\u0435!"
+    - Replices: "Default Replices#SmilePose2  \r\nAAARGH!!! If you're not going to
+        answer, I'll come back next new moon!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3\r\n\u0411\u0443\u0434\u0443
-        \u0436\u0434\u0430\u0442\u044C \u043E\u0442 \u0442\u0435\u0431\u044F \u043E\u0442\u0432\u0435\u0442\u0430!
-        \u0418 \u0447\u0442\u043E\u0431\u044B \u044D\u0442\u043E\u0442 \u043E\u0442\u0432\u0435\u0442
-        \u043D\u0430\u0447\u0438\u043D\u0430\u043B\u0441\u044F \u043D\u0430 \"\u0414\"
-        \u0438 \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u043B\u0441\u044F
-        \u043D\u0430 \"\u0410\", \u041F\u043E\u043D\u044F\u043B?!"
+    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nI'll be waiting for your
+        answer! And that answer better start with a \"Y\" and end with an \"S\",
+        got it?!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3\r\n\u041D\u0435 \u0440\u0430\u0441\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0439
-        \u043C\u0435\u043D\u044F, \u043C\u0430\u043B\u043E\u0439!"
+    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nDon't disappoint me, kid!"
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   padding: {x: 0, y: 0}
@@ -3095,6 +3202,133 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   cameraSpirites: {fileID: 0}
   cameraCandles: {fileID: 0}
+--- !u!1 &4385385722825011231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8451304765678306885}
+  - component: {fileID: 1367438621817997670}
+  - component: {fileID: 4967216320615779931}
+  m_Layer: 0
+  m_Name: Spot Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8451304765678306885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385385722825011231}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: 0.00756, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 575597199737174217}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &1367438621817997670
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385385722825011231}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &4967216320615779931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385385722825011231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &4735361702728667505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,6 +3929,133 @@ Transform:
   m_Children: []
   m_Father: {fileID: 141020561890984798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6128339966205546062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5204263857507874888}
+  - component: {fileID: 356957666755376501}
+  - component: {fileID: 5505136734124680717}
+  m_Layer: 0
+  m_Name: Spot Light (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5204263857507874888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128339966205546062}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: 0.00756, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8060483877372374143}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &356957666755376501
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128339966205546062}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &5505136734124680717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6128339966205546062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &6270774195003613336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +4088,260 @@ Transform:
   - {fileID: 8737762785857797040}
   m_Father: {fileID: 2415304761855987210}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6409989397088502768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3524313660598019570}
+  - component: {fileID: 8633884563049693645}
+  - component: {fileID: 8887181989752363395}
+  m_Layer: 0
+  m_Name: Spot Light (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3524313660598019570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409989397088502768}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: -0.01366, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1435763255700556091}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &8633884563049693645
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409989397088502768}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &8887181989752363395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409989397088502768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!1 &6528785704171900301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8882450774272062863}
+  - component: {fileID: 8229783520433227692}
+  - component: {fileID: 7836254429274995383}
+  m_Layer: 0
+  m_Name: Spot Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8882450774272062863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528785704171900301}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6018422, y: 0.09802732, z: -0.06480813, w: 0.7899219}
+  m_LocalPosition: {x: 0.00756, y: -0.01958, z: 0.01812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3063801688979540456}
+  m_LocalEulerAnglesHint: {x: -69.737, y: 42.253, z: -39.518}
+--- !u!108 &8229783520433227692
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528785704171900301}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 0.9547169, g: 0.72211623, b: 0.5169882, a: 1}
+  m_Intensity: 9.3
+  m_Range: 43.7
+  m_SpotAngle: 145.73137
+  m_InnerSpotAngle: 81.00191
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 2
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!114 &7836254429274995383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528785704171900301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &6556500084986110905
 GameObject:
   m_ObjectHideFlags: 0

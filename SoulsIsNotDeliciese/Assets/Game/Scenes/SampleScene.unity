@@ -3888,17 +3888,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 896918058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &926251808 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7921984231571737389, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-  m_PrefabInstance: {fileID: 1361950214}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &933417619
 GameObject:
   m_ObjectHideFlags: 0
@@ -6283,18 +6272,6 @@ PrefabInstance:
       value: 7.77
       objectReference: {fileID: 0}
     - target: {fileID: 978040253559126661, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.9156184
-      objectReference: {fileID: 0}
-    - target: {fileID: 978040253559126661, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.9156184
-      objectReference: {fileID: 0}
-    - target: {fileID: 978040253559126661, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.9156184
-      objectReference: {fileID: 0}
-    - target: {fileID: 978040253559126661, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.85
       objectReference: {fileID: 0}
@@ -6345,98 +6322,6 @@ PrefabInstance:
     - target: {fileID: 1599422523501769067, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 926251808}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[1].time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].time
-      value: 4.584033
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[3].time
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[0].value
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[1].value
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].value
-      value: 1.8216815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[3].value
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[0].inSlope
-      value: 0.27318966
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].inSlope
-      value: -0.055225443
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[0].outSlope
-      value: 0.27318966
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].outSlope
-      value: -0.055225443
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[0].outWeight
-      value: 0.097751066
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[3].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: WaitCurve.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
-      propertyPath: replices.Array.data[0].FoodEndReplices.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2148710460323591690, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
       propertyPath: m_RenderingLayersMask.m_Bits
