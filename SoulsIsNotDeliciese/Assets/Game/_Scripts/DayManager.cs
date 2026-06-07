@@ -19,7 +19,7 @@ public class DayManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //currentDay = PlayerPrefs.GetInt("CurrentDay", 0);
+        currentDay = PlayerPrefs.GetInt("CurrentDay", 0);
     }
 
 	private void Start()
@@ -42,6 +42,6 @@ public class DayManager : MonoBehaviour
 
 	private void OnDestroy()
 	{
-        //PlayerPrefs.SetInt("CurrentDay", currentDay);
+        PlayerPrefs.SetInt("CurrentDay", currentDay);
 	}
 }

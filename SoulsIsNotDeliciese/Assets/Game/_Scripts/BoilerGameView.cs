@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
-
 public class BoilerGameView : MonoBehaviour
 {
     public Transform capTransform;
@@ -9,10 +8,13 @@ public class BoilerGameView : MonoBehaviour
     public Vector3 capShakeRotate;
     public Transform capRemovePoint;
     public Transform soulItemThrowPoint;
+    public Transform capShoutDownPoint;
     public SpriteRenderer blackBackGround;
     public Transform BoilGamePanel;
     public float throwPower;
     public AudioSource boilingSound;
+    public GameObject ExplodeEffect;
+    public SoundPackage ExplodeSound;
 
     private Vector3 capInitialPos;
     private Quaternion capInitalRot;
@@ -40,13 +42,21 @@ public class BoilerGameView : MonoBehaviour
         Debug.Log("HideViewPanel");
         DOTween.Complete("ShowBoilingGamePanel");
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(BoilGamePanel.DOScale(0f, 1f));
-        sequence.Append(blackBackGround.DOFade(0f, 0.5f));
+        sequence.Append(BoilGamePanel.DOScale(0f, 0.3f));
+        sequence.Join(blackBackGround.DOFade(0f, 0.3f));
         await sequence.Play().SetId("HideBoilingGamePanel").OnComplete(() =>
         {
             BoilGamePanel.transform.localScale = boilGamePanelScale;
             BoilGamePanel.gameObject.SetActive(false);
         }).AsyncWaitForCompletion();
+        await ShutCapDown();
+    }
+    public async UniTask ShutCapDown()
+    {
+        capTransform.DOMove(capInitialPos, 0.2f).From(capShoutDownPoint.position).SetEase(Ease.InQuad);
+        await UniTask.Delay(250);
+        ExplodeEffect.GetComponent<ParticleSystem>().Play();
+        AudioManager.instance.PlayOneShot(ExplodeSound);
     }
     public void StartCapBoiling()
     {

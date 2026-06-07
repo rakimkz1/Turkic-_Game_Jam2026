@@ -25,7 +25,7 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         mainCam = Camera.main;
         InitialSoul.Reset();
 
-        int activeState = 1;//PlayerPrefs.GetInt(InitialSoul.name, 1);
+        int activeState = PlayerPrefs.GetInt(InitialSoul.name, 1);
         if (activeState != 1)
         {
             gameObject.SetActive(false);
