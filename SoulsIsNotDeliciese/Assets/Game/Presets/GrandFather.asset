@@ -18,5 +18,5 @@ MonoBehaviour:
   DragReplices: []
   PutInReplices: []
   bonusDescription: 
-  chanceToExecute: 0.15
+  chanceToExecute: 0.2
   slowDownNumber: 0.75

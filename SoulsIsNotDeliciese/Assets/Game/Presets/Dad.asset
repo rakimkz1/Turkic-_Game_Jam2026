@@ -18,6 +18,6 @@ MonoBehaviour:
   DragReplices: []
   PutInReplices: []
   bonusDescription: 
-  speedBonus: 1.2
+  speedBonus: 1.5
   tiltMaxAngleBonus: 1.3
   tiltSpeedBonus: 1.2

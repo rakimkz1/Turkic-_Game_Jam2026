@@ -10,6 +10,8 @@ public class SoulBall : MonoBehaviour
     public event Action OnBoiled;
     public Func<bool> isMinistalAllowEscape;
     public Vector3 moveDirection;
+    public float centerAttraction;
+    public float maxReflectionTurnAngle;
 
     public float escapeLine;
     public bool isWorking;
@@ -97,7 +99,65 @@ public class SoulBall : MonoBehaviour
     private void Ricashet(Vector3 normal)
     {
         Debug.Log("ricashet");
-        moveDirection = Vector3.Reflect(moveDirection, normal).normalized;
+
+        Vector3 incoming = moveDirection.normalized;
+        Vector3 reflected = Vector3.Reflect(incoming, normal).normalized;
+        float turnAngle = Vector3.Angle(incoming, reflected);
+
+        // Если нет менеджера или нет цели — используем обычный ограниченный рикошет
+        Vector3 capCenter = Vector3.zero;
+        bool haveCenter = false;
+        if (BoilerManager.Instance != null && BoilerManager.Instance.caps != null)
+        {
+            capCenter = BoilerManager.Instance.caps.transform.position;
+            haveCenter = true;
+        }
+
+        if (!haveCenter)
+        {
+            // прежнее поведение с ограничением по углу
+            if (turnAngle <= maxReflectionTurnAngle)
+            {
+                moveDirection = reflected;
+                return;
+            }
+            Vector3 cross1 = Vector3.Cross(incoming, reflected);
+            float sign1 = Mathf.Sign(cross1.z);
+            if (Mathf.Approximately(sign1, 0f))
+            {
+                sign1 = Mathf.Sign(Vector3.Dot(incoming, new Vector3(-normal.y, normal.x, 0f)));
+                if (Mathf.Approximately(sign1, 0f)) sign1 = 1f;
+            }
+            Quaternion q1 = Quaternion.AngleAxis(maxReflectionTurnAngle * sign1, Vector3.forward);
+            moveDirection = (q1 * incoming).normalized;
+            return;
+        }
+
+        // Направление на центр крышки
+        Vector3 aimDir = (capCenter - transform.position).normalized;
+
+        // Смешиваем отражение и направление на центр — сила зависит от угла и параметра centerAttraction.
+        // Чем больший угол поворота, тем сильнее тянем к центру (чтобы избегать резкого обратного разворота).
+        float angleFactor = Mathf.InverseLerp(0f, 180f, turnAngle); // 0..1
+        float attraction = Mathf.Clamp01(centerAttraction * angleFactor);
+
+        // Целевое направление: ближе к aimDir при attraction -> 1
+        Vector3 biased = Vector3.Slerp(reflected, aimDir, attraction).normalized;
+
+        // Ограничиваем поворот от incoming к biased максимумом maxReflectionTurnAngle
+        float desiredAngle = Vector3.Angle(incoming, biased);
+        float limitedAngle = Mathf.Min(desiredAngle, maxReflectionTurnAngle);
+
+        Vector3 cross = Vector3.Cross(incoming, biased);
+        float sign = Mathf.Sign(cross.z);
+        if (Mathf.Approximately(sign, 0f))
+        {
+            sign = Mathf.Sign(Vector3.Dot(incoming, new Vector3(-normal.y, normal.x, 0f)));
+            if (Mathf.Approximately(sign, 0f)) sign = 1f;
+        }
+
+        Quaternion q = Quaternion.AngleAxis(limitedAngle * sign, Vector3.forward);
+        moveDirection = (q * incoming).normalized;
     }
 
     private void Update()

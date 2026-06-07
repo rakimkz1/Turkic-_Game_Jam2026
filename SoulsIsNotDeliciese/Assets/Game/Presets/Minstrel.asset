@@ -18,4 +18,4 @@ MonoBehaviour:
   DragReplices: []
   PutInReplices: []
   bonusDescription: 
-  returnChance: 0.3
+  returnChance: 0.4

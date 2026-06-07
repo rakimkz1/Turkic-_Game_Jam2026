@@ -18,4 +18,4 @@ MonoBehaviour:
   DragReplices: []
   PutInReplices: []
   bonusDescription: 
-  damageFromCap: 0.8
+  damageFromCap: 1
