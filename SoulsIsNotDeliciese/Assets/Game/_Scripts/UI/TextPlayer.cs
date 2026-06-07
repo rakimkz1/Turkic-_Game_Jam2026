@@ -8,6 +8,7 @@ using UnityEngine;
 public class TextPlayer
 {
 	public TextMeshProUGUI Text;
+	public SoundPackage soundSpeech;
 	public State CurrentState => currentState;
 
 	public event Action OnTextClosed, OnTextingEnd;
@@ -150,11 +151,10 @@ public class TextPlayer
 				string ff = fullContent.Substring(0, length); 
 				Text.text = WrapText(ff, 20);
 
-
 				await UniTask.Yield(token);
 			}
 
-			Text.text = WrapText(fullContent, 20); 
+			Text.text = WrapText(fullContent, 20);
 			currentState = State.Showing;
 			OnTextingEnd?.Invoke();
 

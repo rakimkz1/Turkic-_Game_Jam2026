@@ -14,6 +14,7 @@ public class Demon : MonoBehaviour
 	
 	public bool IsPlayingReplices = false;
 	public string DefaultPos;
+	public AudioSource demonSpeech;
 
 	private Animator anim;
 	private bool isDayEnd, isFoodEnd;
@@ -72,6 +73,7 @@ public class Demon : MonoBehaviour
 				anim.CrossFade(replices[i].AnimPos.Trim(), replices[i].animCrossFades);
 			}
 			SetText(replices[i].Replices);
+			demonSpeech.Play();
 
 			float waitTime = Mathf.Clamp(replices[i].Replices.Length, 0, 100) * 0.1f;
 			waitTime = WaitCurve.Evaluate(waitTime);

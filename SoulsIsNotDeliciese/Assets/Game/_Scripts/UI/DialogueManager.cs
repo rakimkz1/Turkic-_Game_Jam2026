@@ -5,6 +5,7 @@ public class DialogueManager : MonoBehaviour
 	public float TextingTime;
 	public float SecondPerLetter;
 	public float WaitTime;
+	public AudioSource sound;
 
 	[SerializeField] private TextPlayer textPlayer;
 
@@ -12,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
 	private void Awake()
 	{
-		textPlayer.Init(TextingTime, SecondPerLetter, WaitTime);
+		textPlayer.Init(TextingTime, SecondPerLetter, WaitTime, sound);
 	}
 
 	[ContextMenu("Play the Content with Texting Time")]
