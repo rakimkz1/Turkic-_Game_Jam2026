@@ -32,5 +32,13 @@ MonoBehaviour:
   - "Please, I\u2019m begging you! I still have so many unfinished stories!"
   PutInReplices:
   - "Don\u2019t\u2014 don\u2019t do this! I was just joking! I always joke!"
+  InBoilReplices:
+  - STOP!!! STOP!!!
+  - "IT\u2019S TOO HOT!!! TOO HOT!!!"
+  - "I\u2019LL SING FOR YOU! I\u2019LL PERFORM! JUST PLEASE!!!"
+  - I WAS LYING ABOUT EVERYTHING, OK?! EVERYTHING!!!
+  - "SOMEONE HELP ME!!! THIS ISN\u2019T FUNNY ANYMORE!!!"
+  - "PLEASE\u2026 I DON\u2019T WANT TO DIE LIKE THIS\u2026"
   bonusDescription: 
+  SoulTalking: 0
   returnChance: 0.4

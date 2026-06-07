@@ -29,5 +29,13 @@ MonoBehaviour:
   - Come on then! Show me what kind of warrior you are!
   PutInReplices:
   - "Then let\u2019s begin. I\u2019ll show you what I am still capable of!"
+  InBoilReplices:
+  - "I WON\u2019T SURRENDER\u2014 I... I SURRENDER!!! STOP!!!"
+  - "I\u2019M SORRY!! I\u2019M SORRY, STOP, IT\u2019S TOO HOT!!!"
+  - "LET ME OUT!!! I\u2019LL TEAR YOU ALL APART IF YOU DON\u2019T!!!"
+  - "THIS ISN\u2019T HOW WARRIORS DIE!!!"
+  - "SOMEONE FIGHT BACK\u2014 WHY CAN\u2019T I MOVE?!"
+  - "I JUST WANTED TO DO IT RIGHT... I DIDN\u2019T KNOW HOW..."
   bonusDescription: 
+  SoulTalking: 0
   damageFromCap: 1

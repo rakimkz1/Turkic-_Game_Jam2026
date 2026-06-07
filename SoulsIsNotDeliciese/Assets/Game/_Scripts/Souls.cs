@@ -8,6 +8,7 @@ public class Souls : ScriptableObject
 	public List<string> HoverReplices;
 	public List<string> DragReplices;
 	public List<string> PutInReplices;
+	public List<string> InBoilReplices;
 	public string bonusDescription;
 	public bool SoulTalking = false;
 

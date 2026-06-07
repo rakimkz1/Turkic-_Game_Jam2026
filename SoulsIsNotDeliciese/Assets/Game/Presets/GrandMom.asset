@@ -31,5 +31,13 @@ MonoBehaviour:
   PutInReplices:
   - "Tch! Hey! You never said I\u2019d be cooked alive! Well\u2026 I\u2019m not exactly
     alive but still!"
+  InBoilReplices:
+  - "NO\u2014 WAIT!!! THIS IS A MISUNDERSTANDING!!!"
+  - "I DIDN\u2019T SIGN UP FOR THIS!!! LET ME OUT!!!"
+  - THIS IS NOT A RITUAL, THIS IS MURDER!!!
+  - "YOU CAN\u2019T DO THIS TO ME!!! I\u2019M THE GREAT BAKSY!!!"
+  - "IT BURNS\u2014 IT BURNS SO MUCH!!! WHY IS THIS HAPPENING?!"
+  - SOMEONE STOP HIM!!! PLEASE!!!
   bonusDescription: 
+  SoulTalking: 0
   tiltRecude: 0.01

@@ -34,6 +34,14 @@ MonoBehaviour:
   PutInReplices:
   - Well... I always knew you were the defective branch of this family. Hopefully
     fate treats you the same someday.
+  InBoilReplices:
+  - YOU LITTLE BASTARD!!!
+  - CURSE YOU! CURSE YOU AND YOUR ENTIRE BLOODLINE!!!
+  - YOU'RE JUST AS ROTTEN AS YOUR FATHER EVER WAS!!!
+  - YOU'RE HIS SPITTING IMAGE!!!
+  - ALL THOSE YEARS... AND THIS IS HOW YOU REPAY US?!
+  - I SHOULD HAVE KNOWN YOU'D GROW INTO A DISGRACE!!!
   bonusDescription: 
+  SoulTalking: 0
   chanceToExecute: 0.2
   slowDownNumber: 0.75
