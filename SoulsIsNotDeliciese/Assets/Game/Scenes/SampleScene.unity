@@ -6323,6 +6323,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1731335188944045037, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
+      propertyPath: replices.Array.data[0].DayStartReplices.Array.data[0].AnimPos
+      value: DemonAppear
+      objectReference: {fileID: 0}
     - target: {fileID: 2148710460323591690, guid: ea722af750f3ce843a67a2235e1c9b38, type: 3}
       propertyPath: m_RenderingLayersMask.m_Bits
       value: 2

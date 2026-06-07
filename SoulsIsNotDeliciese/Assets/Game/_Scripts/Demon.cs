@@ -68,7 +68,7 @@ public class Demon : MonoBehaviour
 			Debug.Log(replices[i].Replices);
 			if (replices[i].AnimPos != String.Empty)
 			{
-				anim.CrossFade(replices[i].AnimPos, replices[i].animCrossFades);
+				anim.CrossFade(replices[i].AnimPos.Trim(), replices[i].animCrossFades);
 			}
 			SetText(replices[i].Replices);
 
@@ -150,7 +150,7 @@ public class Demon : MonoBehaviour
 					Debug.Log($"Replica: {replice}");
 					var d2 = replice.Split("\r\n", StringSplitOptions.RemoveEmptyEntries);
 
-					replices[i / 2].DayStartReplices[j].AnimPos = d2[0].Substring(1);
+					replices[i / 2].DayStartReplices[j].AnimPos = d2[0].Substring(1).Trim();
 
 					replice = d2[1];
 				}
@@ -166,7 +166,7 @@ public class Demon : MonoBehaviour
 					Debug.Log($"Replica: {replice}");
 					var d2 = replice.Split("\r\n", StringSplitOptions.RemoveEmptyEntries);
 
-					replices[i / 2].FoodEndReplices[j].AnimPos = d2[0].Substring(1);
+					replices[i / 2].FoodEndReplices[j].AnimPos = d2[0].Substring(1).Trim();
 
 					replice = d2[1];
 				}
