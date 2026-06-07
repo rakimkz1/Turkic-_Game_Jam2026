@@ -48,7 +48,8 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         isGrabed = true;
         GetComponent<Collider>().enabled = false;
         AudioManager.instance.PlayOneShot(grabSound);
-		discription.SetActive(false); 
+		discription.SetActive(false);
+		PopUpManager.instance?.HoverCreate(InitialSoul.name, InitialSoul.GetDragReplices());
 	}
 
     public void Return()
@@ -62,9 +63,13 @@ public class SoulItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
 	{
-        PopUpManager.instance?.Create(InitialSoul.name, InitialSoul.GetHoverReplices());
+        PopUpManager.instance?.HoverCreate(InitialSoul.name, InitialSoul.GetHoverReplices());
         AudioManager.instance.PlayOneShot(itemSound);
         if (!isGrabed) { discription.SetActive(true); }
+        else
+        {
+			PopUpManager.instance?.HoverCreate(InitialSoul.name, InitialSoul.GetDragReplices());
+		}
         
 	}
 

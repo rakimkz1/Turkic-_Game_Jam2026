@@ -147,12 +147,14 @@ public class TextPlayer
 						(int)(elapsed / currentSecondsPerLetter),
 						fullContent.Length);
 
-				Text.text = fullContent.Substring(0, length);
+				string ff = fullContent.Substring(0, length); 
+				Text.text = WrapText(ff, 20);
+
 
 				await UniTask.Yield(token);
 			}
 
-			Text.text = fullContent;
+			Text.text = WrapText(fullContent, 20); 
 			currentState = State.Showing;
 			OnTextingEnd?.Invoke();
 

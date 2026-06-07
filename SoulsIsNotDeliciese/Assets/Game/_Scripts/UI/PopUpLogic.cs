@@ -10,6 +10,7 @@ public class PopUpLogic : MonoBehaviour
 	[SerializeField] private TextPlayer.TextingType TextingType = TextPlayer.TextingType.SecondsPerLetter;
 
 	private RectTransform rectTransform;
+	private Transform FollowObject;
 
 	public TextPlayer TextPlayer => textPlayer;
 
@@ -19,8 +20,9 @@ public class PopUpLogic : MonoBehaviour
 	/// 
 	/// </summary>
 	/// <param name="target">Либо Курсор, Либо объект на котором будет попап</param>
-	public async void Init(string content) 
+	public async void Init(string content, Transform followObject = null) 
 	{
+		FollowObject = followObject;
 		rectTransform = GetComponent<RectTransform>();
 
 		textPlayer.Init();
@@ -32,6 +34,10 @@ public class PopUpLogic : MonoBehaviour
 	private void Update()
 	{
 		Vector3 Direction = transform.position - Camera.main.transform.position;
+		if (FollowObject != null)
+		{
+			transform.position = FollowObject.position;
+		}
 		transform.rotation = Quaternion.LookRotation(Direction);
 	}
 
