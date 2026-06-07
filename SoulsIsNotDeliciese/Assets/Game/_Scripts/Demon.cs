@@ -159,7 +159,18 @@ public class Demon : MonoBehaviour
 			}
 			for (int j = 0; j < dialogues[i+1].Length; j++)
 			{
+				string replice = dialogues[i][j];
 				replices[i / 2].FoodEndReplices[j] = new Speach();
+				if (replice.StartsWith("#"))
+				{
+					Debug.Log($"Replica: {replice}");
+					var d2 = replice.Split("\r\n", StringSplitOptions.RemoveEmptyEntries);
+
+					replices[i / 2].FoodEndReplices[j].AnimPos = d2[0].Substring(1);
+
+					replice = d2[1];
+				}
+
 				replices[i / 2].FoodEndReplices[j].Replices += dialogues[i + 1][j];
 			}
 		}
