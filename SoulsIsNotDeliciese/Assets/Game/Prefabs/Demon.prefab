@@ -2924,244 +2924,230 @@ MonoBehaviour:
   replices:
   - DayStartReplices:
     - Replices: WAAAH!!!
-      AnimPos: 'DemonAppear  '
+      AnimPos: DemonAppear
       animCrossFades: 0
     - Replices: Good evening, Loser! Oops, my bad, I meant... night! Right!
-      AnimPos: 'DemonDefaultPose  '
+      AnimPos: DemonDefaultPose
       animCrossFades: 0
     - Replices: Why the long face? Don't recognize this place? It's your home, Dummy!
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: What a dump. Stop counting sheep in the sky and cook me something.
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: Why are you just standing there? You think you can talk back to me?
-      AnimPos: 'DefaultFaceSpeech3  '
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
     - Replices: Heh, I'd love to see that stubborn attitude of yours once you see
         your family.
-      AnimPos: 'DefaultFaceSpeech2  '
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
     - Replices: Yep, your family's here! All seven of them. Just like those little
         goats from the tale. Which makes me the wolf.
-      AnimPos: 'ShowFamily  '
+      AnimPos: ShowFamily
       animCrossFades: 0
     - Replices: Already furious, are we? Glad to hear it. Then you know what to do.
         I'm hungry.
-      AnimPos: 'JoyPose2  '
+      AnimPos: JoyPose2
       animCrossFades: 0
     - Replices: ...Wait, have you seriously never cooked before?
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: You're hopeless. Looks like I'll have to teach you everything.
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: Listen up, Loser. On the shelf to your right rest the souls of your
         ancestors.
-      AnimPos: 'ShowSpirits  '
+      AnimPos: ShowSpirits
       animCrossFades: 0
     - Replices: Each one grants you a unique power. Pick whichever one you're willing
         to lose and toss it into the cauldron.
-      AnimPos: 'ShowBoiler  '
+      AnimPos: ShowBoiler
       animCrossFades: 0
     - Replices: And hurry up! I'm hungry enough to eat all seven members of your
         family if you keep dragging your feet!
-      AnimPos: 'SmilePose2  '
+      AnimPos: SmilePose2
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#JoyPose1  \r\nOoooh, that actually looks delicious!
-        You're quite the cook, huh?!"
-      AnimPos: DemonDefaultPose
+    - Replices: Ooooh, that actually looks delicious! You're quite the cook, huh?!
+      AnimPos: JoyPose1
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose1  \r\nWhy so upset? What, suddenly feeling
-        bad for your ancestors?"
-      AnimPos: DemonDefaultPose
+    - Replices: Why so upset? What, suddenly feeling bad for your ancestors?
+      AnimPos: JoyPose1
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nForget about them. They've
-        already lived their lives. Let them disappear for good! You've got your own
-        skin to save!"
-      AnimPos: DemonDefaultPose
+    - Replices: Forget about them. They've already lived their lives. Let them disappear
+        for good! You've got your own skin to save!
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nWell... your family's skin too,
-        technically."
-      AnimPos: DemonDefaultPose
+    - Replices: Well... your family's skin too, technically.
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#ShowCandle  \r\nAnyway, enough of that. See that
-        candle? Blow out one of its flames."
-      AnimPos: DemonDefaultPose
+    - Replices: Anyway, enough of that. See that candle? Blow out one of its flames.
+      AnimPos: ShowCandle
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nWondering what the candle's for?"
-      AnimPos: DemonDefaultPose
+    - Replices: Wondering what the candle's for?
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose1  \r\nSomeone as dense as you could never
-        grasp my genius, but this is one of my personal inventions."
-      AnimPos: DemonDefaultPose
+    - Replices: Someone as dense as you could never grasp my genius, but this is
+        one of my personal inventions.
+      AnimPos: JoyPose1
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2  \r\nYou blow out one flame every day.
-        Once they're all gone, the new moon will end. And so will my freedom..."
-      AnimPos: DemonDefaultPose
+    - Replices: You blow out one flame every day. Once they're all gone, the new
+        moon will end. And so will my freedom...
+      AnimPos: JoyPose2
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3  \r\n...Almost made myself cry
-        there. Forget I said that!"
-      AnimPos: DemonDefaultPose
+    - Replices: ...Almost made myself cry there. Forget I said that!
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
-    - Replices: "Default Replices#ShowCandle  \r\nNow put out the damn flame so we
-        can move on to the next day!"
-      AnimPos: DemonDefaultPose
+    - Replices: Now put out the damn flame so we can move on to the next day!
+      AnimPos: ShowCandle
       animCrossFades: 0
   - DayStartReplices:
     - Replices: Good night, Dummy!
-      AnimPos: 'DefaultFaceSpeech2  '
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
     - Replices: How are you feeling? Doing great after yesterday, I bet.
-      AnimPos: 'DefaultFaceSpeech3  '
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
     - Replices: Listen up. Today's been rough, and I'm starving. Cook me one of your
         specialties.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
     - Replices: And none of that stubborn nonsense! Got it, Loser?!
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#SmilePose2  \r\nOoooh, now that's delicious! No
-        exaggeration, this deserves five Michelin stars!"
-      AnimPos: DemonDefaultPose
+    - Replices: Ooooh, now that's delicious! No exaggeration, this deserves five
+        Michelin stars!
+      AnimPos: SmilePose2
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2  \r\nYou're a terrible descendant, but
-        have you considered becoming my chef? Hahahaha!"
-      AnimPos: DemonDefaultPose
+    - Replices: You're a terrible descendant, but have you considered becoming my
+        chef? Hahahaha!
+      AnimPos: JoyPose2
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nActually, never mind. You'd probably
-        throw me into the cauldron too. You seem to have a thing for that, don't
-        you?!"
-      AnimPos: DemonDefaultPose
+    - Replices: Actually, never mind. You'd probably throw me into the cauldron too.
+        You seem to have a thing for that, don't you?!
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: Default ReplicesWhatever. That joke wasn't funny anyway. You're pathetic.
-        Just skip the day already.
+    - Replices: Whatever. That joke wasn't funny anyway. You're pathetic. Just skip
+        the day already.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   - DayStartReplices:
     - Replices: Evening, Dummy! What a beautiful night.
-      AnimPos: 'SmilePose2  '
+      AnimPos: SmilePose2
       animCrossFades: 0
     - Replices: Looks like you've gotten used to all this... Burning the souls of
         your own family!
-      AnimPos: 'DefaultFaceSpeech3  '
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
     - Replices: I heard your jezde, Kotibar Batyr, was never really a Batyr.
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: What, you think I made that up? Pfff. Why would I invent nasty rumors
         about a man who's dead... and about to die a second time?
-      AnimPos: 'SmilePose1  '
+      AnimPos: SmilePose1
       animCrossFades: 0
     - Replices: Yep. Truth is, Kotibar Batyr only pretended to be a Batyr.
-      AnimPos: 'SmilePose1  '
+      AnimPos: SmilePose1
       animCrossFades: 0
     - Replices: But you know who can't pretend? You. Now go cook me a soul, and stop
         pretending to be a good person.
-      AnimPos: 'DefaultFaceSpeech2  '
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#SmilePose2  \r\nPHUUUAAAH! What the hell is this
-        garbage?!"
-      AnimPos: DemonDefaultPose
+    - Replices: PHUUUAAAH! What the hell is this garbage?!
+      AnimPos: SmilePose2
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nI don't think even your grandmother
-        cooked this badly, and she made plenty of disgusting things!"
-      AnimPos: DemonDefaultPose
+    - Replices: I don't think even your grandmother cooked this badly, and she made
+        plenty of disgusting things!
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech1  \r\nQuit staring at me like
-        that! What, you think I'm lying?"
-      AnimPos: DemonDefaultPose
+    - Replices: Quit staring at me like that! What, you think I'm lying?
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nI'd bet a tooth she tried poisoning
-        your grandfather. The funny part is, you ended up drinking the poison instead!"
-      AnimPos: DemonDefaultPose
+    - Replices: I'd bet a tooth she tried poisoning your grandfather. The funny part
+        is, you ended up drinking the poison instead!
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2  \r\nOr do you think I'm lying about your
-        cooking being awful?"
-      AnimPos: DemonDefaultPose
+    - Replices: Or do you think I'm lying about your cooking being awful?
+      AnimPos: JoyPose2
       animCrossFades: 0
-    - Replices: Default ReplicesEither way, stop changing the subject. Blow out the
-        flame and let's move on to the final day.
+    - Replices: Either way, stop changing the subject. Blow out the flame and let's
+        move on to the final day.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
   - DayStartReplices:
     - Replices: Well, look who's here, Dummy.
-      AnimPos: 'SmilePose1  '
+      AnimPos: SmilePose1
       animCrossFades: 0
     - Replices: This is our last day, so I'll keep it brief.
-      AnimPos: 'DefaultFaceSpeech2  '
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
     - Replices: The new moon ends tomorrow, and my powers will disappear.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
     - Replices: And I'm not saying this because I care about you. Well... I mean...
         maybe I do...
-      AnimPos: 'DefaultFaceSpeech1  '
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
     - Replices: Anyway. Become one of us.
-      AnimPos: 'SmilePose2  '
+      AnimPos: SmilePose2
       animCrossFades: 0
     - Replices: You're already the most messed-up person alive. You burned your own
         ancestors for me, a Shaitan.
-      AnimPos: 'SmilePose1  '
+      AnimPos: SmilePose1
       animCrossFades: 0
     - Replices: So technically, you're not getting any worse.
-      AnimPos: 'DefaultFaceSpeech2  '
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
     - Replices: Well? Don't rush to say no. I can wait a couple more hours.
-      AnimPos: 'DefaultFaceSpeech3  '
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
     - Replices: While you're thinking, cook me something.
       AnimPos: DemonDefaultPose
       animCrossFades: 0
     FoodEndReplices:
-    - Replices: "Default Replices#JoyPose1  \r\nSo? Have you decided?"
-      AnimPos: DemonDefaultPose
+    - Replices: So? Have you decided?
+      AnimPos: JoyPose1
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\n..."
-      AnimPos: DemonDefaultPose
+    - Replices: ...
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nWhy are you quiet? Still thinking?"
-      AnimPos: DemonDefaultPose
+    - Replices: Why are you quiet? Still thinking?
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nKid, I don't have much
-        time left. So hurry it up."
-      AnimPos: DemonDefaultPose
+    - Replices: Kid, I don't have much time left. So hurry it up.
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nYou did burn your ancestors,
-        sure. But let's be honest, they weren't exactly angels either."
-      AnimPos: DemonDefaultPose
+    - Replices: You did burn your ancestors, sure. But let's be honest, they weren't
+        exactly angels either.
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
-    - Replices: "Default Replices#JoyPose2  \r\nOne was a womanizer, another a liar,
-        and another a fraud. What, you think you're the only one carrying sins?"
-      AnimPos: DemonDefaultPose
+    - Replices: One was a womanizer, another a liar, and another a fraud. What, you
+        think you're the only one carrying sins?
+      AnimPos: JoyPose2
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech1  \r\nBut none of them can become
-        a Shaitan. They're all hypocrites who can't admit their own faults."
-      AnimPos: DemonDefaultPose
+    - Replices: But none of them can become a Shaitan. They're all hypocrites who
+        can't admit their own faults.
+      AnimPos: DefaultFaceSpeech1
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech2  \r\nYou can. That's why I'm
-        offering you a place beside me."
-      AnimPos: DemonDefaultPose
+    - Replices: You can. That's why I'm offering you a place beside me.
+      AnimPos: DefaultFaceSpeech2
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose1  \r\nWell?"
-      AnimPos: DemonDefaultPose
+    - Replices: Well?
+      AnimPos: SmilePose1
       animCrossFades: 0
-    - Replices: "Default Replices#SmilePose2  \r\nAAARGH!!! If you're not going to
-        answer, I'll come back next new moon!"
-      AnimPos: DemonDefaultPose
+    - Replices: AAARGH!!! If you're not going to answer, I'll come back next new
+        moon!
+      AnimPos: SmilePose2
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nI'll be waiting for your
-        answer! And that answer better start with a \"Y\" and end with an \"S\",
-        got it?!"
-      AnimPos: DemonDefaultPose
+    - Replices: I'll be waiting for your answer! And that answer better start with
+        a "Y" and end with an "S", got it?!
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
-    - Replices: "Default Replices#DefaultFaceSpeech3  \r\nDon't disappoint me, kid!"
-      AnimPos: DemonDefaultPose
+    - Replices: Don't disappoint me, kid!
+      AnimPos: DefaultFaceSpeech3
       animCrossFades: 0
   padding: {x: 0, y: 0}
   IsPlayingReplices: 0

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -12,17 +13,20 @@ public class PopUpLogic : MonoBehaviour
 
 	public TextPlayer TextPlayer => textPlayer;
 
+	public event Action OnTextClosed;
+
 	/// <summary>
 	/// 
 	/// </summary>
 	/// <param name="target">Либо Курсор, Либо объект на котором будет попап</param>
-	public void Init(string content) 
+	public async void Init(string content) 
 	{
 		rectTransform = GetComponent<RectTransform>();
 
 		textPlayer.Init();
-		textPlayer.SkipOrPlay(content, TextSpeed, WaitTime, TextingType);
 		textPlayer.OnTextClosed += Destroy;
+		await textPlayer.SkipOrPlay(content, TextSpeed, WaitTime, TextingType);
+		
 	}
 
 	private void Update()
@@ -33,6 +37,7 @@ public class PopUpLogic : MonoBehaviour
 
 	private void Destroy()
 	{
+		OnTextClosed?.Invoke();
 		Destroy(gameObject);
 	}
 }
