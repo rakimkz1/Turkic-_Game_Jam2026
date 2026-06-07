@@ -10,6 +10,7 @@ public class SoulBall : MonoBehaviour
     public event Action OnBoiled;
     public Func<bool> isMinistalAllowEscape;
     public Vector3 moveDirection;
+    public Transform capPosition;
     public float centerAttraction;
     public float maxReflectionTurnAngle;
 
@@ -72,7 +73,7 @@ public class SoulBall : MonoBehaviour
     {
         if(collision.collider != null && collision.collider.tag == "Boiler" && isColider)
         {
-            Ricashet((transform.position - collision.contacts[0].point).normalized);
+            moveDirection = (capPosition.position - transform.position).normalized;
         }
     }
     private void OnCollisionExit(Collision collision)

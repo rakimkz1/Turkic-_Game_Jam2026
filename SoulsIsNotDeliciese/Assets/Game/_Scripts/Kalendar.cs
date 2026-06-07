@@ -13,7 +13,9 @@ public class Kalendar : MonoBehaviour
     public Image blackBackgroundPanel;
     public TextMeshProUGUI nextDayText;
     public SoundPackage candleBreath;
+    public GameObject gameOverPanel;
     public SoundPackage reject;
+    public AudioSource GameOverSound;
     private Sequence sequence;
     private bool _isAnim;
 
@@ -25,10 +27,15 @@ public class Kalendar : MonoBehaviour
     {
         if (DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota && DayManager.instance.currentDay < 3 && !_isAnim)
             StartAnim();
+        else if(DemonKvotaManager.instance.todaysKvota >= DemonKvotaManager.instance.maxKvota && DayManager.instance.currentDay == 3 && !_isAnim)
+        {
+            gameOverPanel.SetActive(true);
+            AudioManager.instance.SetAllSoundVolume(0f);
+            GameOverSound.Play();
+        }
         else
             Reject();
     }
-
     private async UniTask StartAnim()
     {
         Debug.Log("Kalendar work");
