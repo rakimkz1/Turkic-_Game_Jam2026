@@ -11,7 +11,7 @@ public class Kalendar : MonoBehaviour
     public GameObject[] candles;
     public CinemachineCamera candleCam;
     public Image blackBackgroundPanel;
-    public TextMeshProUGUI nextDayText;
+    public Text nextDayText;
     public SoundPackage candleBreath;
     public SoundPackage reject;
     private Sequence sequence;
