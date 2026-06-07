@@ -9,18 +9,15 @@ public class DemonTutorial : MonoBehaviour
     public void ShowSpirits()
     {
         cameraSpirites.Priority = 10;
-        cameraCandles.Priority = -10;
-        Debug.Log("Spirites");
+        cameraCandles.Priority =  -10;
     }
     public void ReturnToNormal()
     {
         cameraCandles.Priority = -10;
         cameraCandles.Priority = -10;
-        Debug.Log("Return");
     }
     public void ShowCandles()
     {
-        Debug.Log("Candles");
         cameraSpirites.Priority = -10;
         cameraCandles.Priority = 10;
     }

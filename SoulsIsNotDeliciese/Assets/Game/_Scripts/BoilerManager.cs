@@ -69,7 +69,6 @@ public class BoilerManager : MonoBehaviour
         cameraMovement.isMoveable = false;
         cameraMovement.ResetCamera();
         await _view.ShowBoilingGamePanel();
-        Debug.Log(soulBall.transform.position);
         isBoilderGamePlaying = true;
         onBoiderGameStart?.Invoke();
         SoulsManager.Instance.RemoveSouls(_selectedSouls);

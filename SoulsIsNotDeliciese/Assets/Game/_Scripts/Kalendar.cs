@@ -36,8 +36,6 @@ public class Kalendar : MonoBehaviour
         candleCam.Priority = 10;
         await UniTask.Delay(2000);
         AudioManager.instance.PlayOneShot(candleBreath);
-        DOTween.To(() => AudioManager.instance.audioSource.volume, x => AudioManager.instance.SetAllSoundVolume(x), 0f, candleBreath.audioClip.length).SetEase(Ease.InQuad);
-
         blackBackgroundPanel.color = Color.black;
         candleCam.Priority = -10;
         candles[DayManager.instance.currentDay].SetActive(false);
@@ -45,12 +43,11 @@ public class Kalendar : MonoBehaviour
         nextDayText.text = $"Days {DayManager.instance.currentDay + 2}";
         sequence = DOTween.Sequence();
         sequence.Append(nextDayText.DOFade(1f, 1f).From(0f));
-        sequence.Insert(3f,nextDayText.DOFade(0f, 1f));
+        sequence.SetDelay(500);
+        sequence.Append(nextDayText.DOFade(0f, 1f));
         sequence.Join(blackBackgroundPanel.DOFade(0f, 1f));
-        sequence.Join(DOTween.To(() => AudioManager.instance.audioSource.volume, x => AudioManager.instance.SetAllSoundVolume(x), 1f, 3f));
         sequence.Play().OnComplete(() =>
         {
-            Debug.Log("Complete");
             DayManager.instance.StartNewDay();
             _isAnim = false;
         });
