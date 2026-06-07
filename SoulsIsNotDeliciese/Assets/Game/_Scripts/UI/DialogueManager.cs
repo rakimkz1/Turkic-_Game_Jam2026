@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
 	private void Awake()
 	{
-		textPlayer.Init(TextingTime, SecondPerLetter, WaitTime, sound);
+		textPlayer.Init(TextingTime, SecondPerLetter, WaitTime);
 	}
 
 	[ContextMenu("Play the Content with Texting Time")]
