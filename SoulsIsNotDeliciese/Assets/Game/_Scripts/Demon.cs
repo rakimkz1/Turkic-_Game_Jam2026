@@ -9,7 +9,9 @@ public class Demon : MonoBehaviour
 	[SerializeField] private Replices[] replices;
 	
 	public bool IsPlayingReplices = false;
+	public string DefaultPos;
 
+	private Animator anim;
 	private bool isDayEnd, isFoodEnd;
 
 	private void Start()
@@ -18,11 +20,14 @@ public class Demon : MonoBehaviour
 		DemonKvotaManager.instance.OnKvotaFilled += PlayFoodEndReplices;
 
 		textPlayer.Init();
+		anim = GetComponent<Animator>();
+		PlayDayStartReplices();
 	}
 
 	private void PlayDayStartReplices()
 	{
 		if (isDayEnd) { return; }
+		Debug.Log("Start Replice");
 		isDayEnd = true;
 		isFoodEnd = false;
 
@@ -38,17 +43,24 @@ public class Demon : MonoBehaviour
 		PlayReplices(replices[DayManager.instance.currentDay].FoodEndReplices);
 	}
 
-	private async UniTask PlayReplices(string[] replices)
+	private async UniTask PlayReplices(Speach[] replices)
 	{
 		if (IsPlayingReplices) { return; }
 
+		Debug.Log("Replices");
 		IsPlayingReplices = true;
 
 		for (int i = 0; i < replices.Length; i++)
 		{
-			await textPlayer.SkipOrPlay(replices[i], speed, waitTime, TextPlayer.TextingType.SecondsPerLetter);
+			Debug.Log(replices[i].Replices);
+			if (replices[i].AnimPos != String.Empty)
+			{
+				anim.CrossFade(replices[i].AnimPos, replices[i].animCrossFades);
+			}
+			await textPlayer.SkipOrPlay(replices[i].Replices, speed, waitTime, TextPlayer.TextingType.SecondsPerLetter);
 		}
 
+		anim.Play(DefaultPos);
 		IsPlayingReplices = false;
 	}
 
@@ -56,7 +68,14 @@ public class Demon : MonoBehaviour
 	[Serializable]
 	public class Replices
 	{
-		public string[] DayStartReplices;
-		public string[] FoodEndReplices;
+		public Speach[] DayStartReplices;
+		public Speach[] FoodEndReplices;
+	}
+	[Serializable]
+	public class Speach
+	{
+		public string Replices;
+		public string AnimPos;
+		public float animCrossFades;
 	}
 }

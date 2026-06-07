@@ -27,20 +27,6 @@ public class BoilerGameView : MonoBehaviour
         capInitalRot = capTransform.rotation;
         capInitialPos = capTransform.position;
     }
-
-    public void StartCapBoiling()
-    {
-        boilingSound.gameObject.SetActive(true);
-        capBoilingTween = DOTween.Sequence();
-        capBoilingTween.Append(capTransform.DOShakePosition(0.5f, capShakeStreight, 10, 90, false).SetLoops(-1).SetEase(Ease.Linear));
-        capBoilingTween.Join(capTransform.DOShakeRotation(0.5f, capShakeRotate, 10, 90, false).SetLoops(-1).SetEase(Ease.Linear));
-        capBoilingTween.Play();
-    }
-    public void StopCapBoiling()
-    {
-        boilingSound.gameObject.SetActive(false);
-        capBoilingTween?.Kill();
-    }
     public async UniTask ShowBoilingGamePanel()
     {
         DOTween.Complete("HideBoilingGamePanel");
@@ -62,22 +48,40 @@ public class BoilerGameView : MonoBehaviour
             BoilGamePanel.gameObject.SetActive(false);
         }).AsyncWaitForCompletion();
     }
+    public void StartCapBoiling()
+    {
+        Debug.Log("StartCap");
+        boilingSound.gameObject.SetActive(true);
+        capBoilingTween?.Kill();
+        capBoilingTween = DOTween.Sequence();
+        capBoilingTween.Append(capTransform.DOShakePosition(0.5f, capShakeStreight, 10, 90, false).SetLoops(int.MaxValue).SetEase(Ease.Linear));
+        capBoilingTween.Join(capTransform.DOShakeRotation(0.5f, capShakeRotate, 10, 90, false).SetLoops(int.MaxValue).SetEase(Ease.Linear));
+        capBoilingTween.Play();
+    }
+    public void StopCapBoiling()
+    {
+        Debug.Log("StopBoiling");
+        boilingSound.gameObject.SetActive(false);
+        capBoilingTween?.Kill();
+    }
     public async UniTask OpenCap()
     {
-        capOpenCloseTween?.Complete();
+        capOpenCloseTween?.Kill();
         StopCapBoiling();
+        Debug.Log("OpenCap");
         capOpenCloseTween = DOTween.Sequence();
         capOpenCloseTween.Append(capTransform.DOMove(capRemovePoint.position, 1f));
         capOpenCloseTween.Join(capTransform.DORotateQuaternion(capRemovePoint.rotation, 1f));
-        await capOpenCloseTween.Play().AsyncWaitForCompletion();
+        await capOpenCloseTween.AsyncWaitForCompletion();
     }
     public async UniTask CloseCap()
     {
-        capOpenCloseTween?.Complete();
-        capOpenCloseTween= DOTween.Sequence();
+        Debug.Log("CloseCap");
+        capOpenCloseTween?.Kill();
+        capOpenCloseTween = DOTween.Sequence();
         capOpenCloseTween.Append(capTransform.DOMove(capInitialPos,1f));
         capOpenCloseTween.Join(capTransform.DORotateQuaternion(capInitalRot, 1f));
-        await capOpenCloseTween.Play().AsyncWaitForCompletion();
+        await capOpenCloseTween.AsyncWaitForCompletion();
         StartCapBoiling();
     }
     public async UniTask ThrowItemIntoCap(Transform soulsItem)
